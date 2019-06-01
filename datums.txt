@@ -1,0 +1,386 @@
+;Список датумов Digitals (Украина)
+
+;Назначение ключевых полей в описаниях датумов
+
+;a             - Большая полуось эллипсоида
+;f             - Величина обратная полярному сжатию f=a/(a-b), где b – малая полуось эллипсоида
+;Scale         - Масштабный коэффициент осевого меридиана 
+;FalseEast     - Смещение начала отсчета на восток
+;FalseNorth    - Смещение начала отсчета на север
+;PrimeMeridian - Значение долготы западного меридиана первой зоны
+;PrimeParallel - значение широты начальной параллели
+;AddZone       - Добавлять ли номер зоны к координатам при пересчете
+;CurrentZone   - Текущий номер зоны
+;ZoneSize      - Ширина зоны в градусах 
+;Helmert       - Коэффициенты перехода к эллипсоиду WGS84
+;Geoid         - Имя секции с описанием геоида в файле Geoids.ini (например EGM96)
+;ArcGIS        - Описание датума в формате ArcGIS. Записывается в файл *.PRJ, при сохранении карты в Shape
+;MapInfo       - Описание датума в формате MapInfo. Записывается в поле CoordSys при сохранении карты в MID/MIF
+
+;TiePoint1     - Связующие точки для аффинного преобразования в формате 
+;                Xс Yс Zс Xн Yн Zн, где Xс Yс Zс - координаты точки в старой системе, а Xн Yн Zн - в новой
+;TiePointN     - N <= 100
+;Polynom       - Полиномиальная коррекция для устранения невязок на связующих точках: 1 - вкл, 0 - откл.
+;                требует не менее 4 точек и применяется для связи неточных СК42/СК63 с точной УСК2000 или UTM
+;                http://www.geosystema.net/forum/viewtopic.php?f=1&t=2801&p=14294#14294
+
+;Коэффициенты аффинного преобразования (альтернатива связующим точкам)
+;AffTransN     - Сдвиг на север, м
+;AffTransE     - Сдвиг на восток, м
+;AffTransH     - Сдвиг по высоте, м
+;AffRotation   - Разворот, градусы
+;AffScale      - Коэффициент масштабирования
+
+
+[SK42]
+a=6378245
+f=298.3
+Scale=1.0
+FalseEast=500000
+FalseNorth=0
+PrimeMeridian=0
+AddZone=1
+Helmert=25.0 -141 -78.5 0.0 -0.35 -0.736 0.0
+
+[UTM]
+a=6378137
+f=298.257223563
+Scale=0.9996
+FalseEast=500000
+FalseNorth=0
+PrimeMeridian=-180
+AddZone=0
+Helmert=0 0 0 0 0 0 0
+
+[SK63]
+a=6378245
+f=298.3
+Scale=1.0
+FalseEast=300000
+FalseNorth=-9214.688
+PrimeMeridian=22
+AddZone=1
+ZoneSize=3
+Helmert=25.0 -141 -78.5 0.0 -0.35 -0.736 0.0
+
+[SK63(район C)]
+a=6378245
+f=298.3
+Scale=1.0
+FalseEast=250000
+FalseNorth=-11057.701
+PrimeMeridian=23.45
+AddZone=1
+ZoneSize=3
+Helmert=25.0 -141 -78.5 0.0 -0.35 -0.736 0.0
+
+[EPSG::5822]
+a=6378245
+f=298.3
+Scale=1.0
+FalseEast=500000
+FalseNorth=0
+PrimeMeridian=0
+AddZone=1
+Helmert=24.0 -121 -76
+
+;УСК2000 зона 4 (18°-24°)
+[USK2000(4)]
+a=6378245
+f=298.3
+Scale=1.0
+FalseEast=500000
+FalseNorth=0
+PrimeMeridian=0
+AddZone=1
+CurrentZone=4
+Helmert=H2000
+ArcGIS=PROJCS["Pulkovo_1942_GK_Zone_4",GEOGCS["GCS_Pulkovo_1942",DATUM["D_Pulkovo_1942",SPHEROID["Krasovsky_1940",6378245.0,298.3]],PRIMEM["Greenwich",0.0],UNIT["Degree",0.0174532925199433]],PROJECTION["Gauss_Kruger"],PARAMETER["False_Easting",4500000.0],PARAMETER["False_Northing",0.0],PARAMETER["Central_Meridian",21.0],PARAMETER["Scale_Factor",1.0],PARAMETER["Latitude_Of_Origin",0.0],UNIT["Meter",1.0]]
+MapInfo=
+
+;УСК2000 зона 5 (24°-30°)
+[USK2000(5)]
+a=6378245
+f=298.3
+Scale=1.0
+FalseEast=500000
+FalseNorth=0
+PrimeMeridian=0
+AddZone=1
+CurrentZone=5
+Helmert=H2000
+ArcGIS=PROJCS["Pulkovo_1942_GK_Zone_5",GEOGCS["GCS_Pulkovo_1942",DATUM["D_Pulkovo_1942",SPHEROID["Krasovsky_1940",6378245.0,298.3]],PRIMEM["Greenwich",0.0],UNIT["Degree",0.0174532925199433]],PROJECTION["Gauss_Kruger"],PARAMETER["False_Easting",5500000.0],PARAMETER["False_Northing",0.0],PARAMETER["Central_Meridian",27.0],PARAMETER["Scale_Factor",1.0],PARAMETER["Latitude_Of_Origin",0.0],UNIT["Meter",1.0]]
+MapInfo=
+
+;УСК2000 зона 6 (30°-36°)
+[USK2000(6)]
+a=6378245
+f=298.3
+Scale=1.0
+FalseEast=500000
+FalseNorth=0
+PrimeMeridian=0
+AddZone=1
+CurrentZone=6
+Helmert=H2000
+ArcGIS=PROJCS["Pulkovo_1942_GK_Zone_6",GEOGCS["GCS_Pulkovo_1942",DATUM["D_Pulkovo_1942",SPHEROID["Krasovsky_1940",6378245.0,298.3]],PRIMEM["Greenwich",0.0],UNIT["Degree",0.0174532925199433]],PROJECTION["Gauss_Kruger"],PARAMETER["False_Easting",6500000.0],PARAMETER["False_Northing",0.0],PARAMETER["Central_Meridian",33.0],PARAMETER["Scale_Factor",1.0],PARAMETER["Latitude_Of_Origin",0.0],UNIT["Meter",1.0]]
+MapInfo=
+
+;УСК2000 зона 7 (36°-42°)
+[USK2000(7)]
+a=6378245
+f=298.3
+Scale=1.0
+FalseEast=500000
+FalseNorth=0
+PrimeMeridian=0
+AddZone=1
+CurrentZone=7
+Helmert=H2000
+ArcGIS=PROJCS["Pulkovo_1942_GK_Zone_7",GEOGCS["GCS_Pulkovo_1942",DATUM["D_Pulkovo_1942",SPHEROID["Krasovsky_1940",6378245.0,298.3]],PRIMEM["Greenwich",0.0],UNIT["Degree",0.0174532925199433]],PROJECTION["Gauss_Kruger"],PARAMETER["False_Easting",7500000.0],PARAMETER["False_Northing",0.0],PARAMETER["Central_Meridian",39.0],PARAMETER["Scale_Factor",1.0],PARAMETER["Latitude_Of_Origin",0.0],UNIT["Meter",1.0]]
+MapInfo=
+
+;СК42 зона 4 (18°-24°)
+[SK42(4)]
+a=6378245
+f=298.3
+Scale=1.0
+FalseEast=500000
+FalseNorth=0
+PrimeMeridian=0
+AddZone=1
+CurrentZone=4
+Helmert=25.0 -141 -78.5 0.0 -0.35 -0.736 0.0
+ArcGIS=PROJCS["Pulkovo_1942_GK_Zone_4",GEOGCS["GCS_Pulkovo_1942",DATUM["D_Pulkovo_1942",SPHEROID["Krasovsky_1940",6378245.0,298.3]],PRIMEM["Greenwich",0.0],UNIT["Degree",0.0174532925199433]],PROJECTION["Gauss_Kruger"],PARAMETER["False_Easting",4500000.0],PARAMETER["False_Northing",0.0],PARAMETER["Central_Meridian",21.0],PARAMETER["Scale_Factor",1.0],PARAMETER["Latitude_Of_Origin",0.0],UNIT["Meter",1.0]]
+MapInfo=
+
+;СК42 зона 5 (24°-30°)
+[SK42(5)]
+a=6378245
+f=298.3
+Scale=1.0
+FalseEast=500000
+FalseNorth=0
+PrimeMeridian=0
+AddZone=1
+CurrentZone=5
+Helmert=25.0 -141 -78.5 0.0 -0.35 -0.736 0.0
+ArcGIS=PROJCS["Pulkovo_1942_GK_Zone_5",GEOGCS["GCS_Pulkovo_1942",DATUM["D_Pulkovo_1942",SPHEROID["Krasovsky_1940",6378245.0,298.3]],PRIMEM["Greenwich",0.0],UNIT["Degree",0.0174532925199433]],PROJECTION["Gauss_Kruger"],PARAMETER["False_Easting",5500000.0],PARAMETER["False_Northing",0.0],PARAMETER["Central_Meridian",27.0],PARAMETER["Scale_Factor",1.0],PARAMETER["Latitude_Of_Origin",0.0],UNIT["Meter",1.0]]
+MapInfo=
+
+;СК42 зона 6 (30°-36°)
+[SK42(6)]
+a=6378245
+f=298.3
+Scale=1.0
+FalseEast=500000
+FalseNorth=0
+PrimeMeridian=0
+AddZone=1
+CurrentZone=6
+Helmert=25.0 -141 -78.5 0.0 -0.35 -0.736 0.0
+ArcGIS=PROJCS["Pulkovo_1942_GK_Zone_6",GEOGCS["GCS_Pulkovo_1942",DATUM["D_Pulkovo_1942",SPHEROID["Krasovsky_1940",6378245.0,298.3]],PRIMEM["Greenwich",0.0],UNIT["Degree",0.0174532925199433]],PROJECTION["Gauss_Kruger"],PARAMETER["False_Easting",6500000.0],PARAMETER["False_Northing",0.0],PARAMETER["Central_Meridian",33.0],PARAMETER["Scale_Factor",1.0],PARAMETER["Latitude_Of_Origin",0.0],UNIT["Meter",1.0]]
+MapInfo=
+
+;СК42 зона 7 (36°-42°)
+[SK42(7)]
+a=6378245
+f=298.3
+Scale=1.0
+FalseEast=500000
+FalseNorth=0
+PrimeMeridian=0
+AddZone=1
+CurrentZone=7
+Helmert=25.0 -141 -78.5 0.0 -0.35 -0.736 0.0
+ArcGIS=PROJCS["Pulkovo_1942_GK_Zone_7",GEOGCS["GCS_Pulkovo_1942",DATUM["D_Pulkovo_1942",SPHEROID["Krasovsky_1940",6378245.0,298.3]],PRIMEM["Greenwich",0.0],UNIT["Degree",0.0174532925199433]],PROJECTION["Gauss_Kruger"],PARAMETER["False_Easting",7500000.0],PARAMETER["False_Northing",0.0],PARAMETER["Central_Meridian",39.0],PARAMETER["Scale_Factor",1.0],PARAMETER["Latitude_Of_Origin",0.0],UNIT["Meter",1.0]]
+MapInfo=
+
+;UTM зона 34 (18°-24°)
+[UTM(34)]
+a=6378137
+f=298.257223563
+Scale=0.9996
+FalseEast=500000
+FalseNorth=0
+PrimeMeridian=-180
+AddZone=0
+CurrentZone=34
+ArcGIS=PROJCS["WGS_1984_UTM_Zone_34N",GEOGCS["GCS_WGS_1984",DATUM["D_WGS_1984",SPHEROID["WGS_1984",6378137.0,298.257223563]],PRIMEM["Greenwich",0.0],UNIT["Degree",0.0174532925199433]],PROJECTION["Transverse_Mercator"],PARAMETER["False_Easting",500000.0],PARAMETER["False_Northing",0.0],PARAMETER["Central_Meridian",21.0],PARAMETER["Scale_Factor",0.9996],PARAMETER["Latitude_Of_Origin",0.0],UNIT["Meter",1.0]]
+
+;UTM зона 35 (24°-30°)
+[UTM(35)]
+a=6378137
+f=298.257223563
+Scale=0.9996
+FalseEast=500000
+FalseNorth=0
+PrimeMeridian=-180
+AddZone=0
+CurrentZone=35
+ArcGIS=PROJCS["WGS_1984_UTM_Zone_35N",GEOGCS["GCS_WGS_1984",DATUM["D_WGS_1984",SPHEROID["WGS_1984",6378137.0,298.257223563]],PRIMEM["Greenwich",0.0],UNIT["Degree",0.0174532925199433]],PROJECTION["Transverse_Mercator"],PARAMETER["False_Easting",500000.0],PARAMETER["False_Northing",0.0],PARAMETER["Central_Meridian",27.0],PARAMETER["Scale_Factor",0.9996],PARAMETER["Latitude_Of_Origin",0.0],UNIT["Meter",1.0]]
+
+;UTM зона 36 (30°-36°)
+[UTM(36)]
+a=6378137
+f=298.257223563
+Scale=0.9996
+FalseEast=500000
+FalseNorth=0
+PrimeMeridian=-180
+AddZone=0
+CurrentZone=36
+ArcGIS=PROJCS["WGS_1984_UTM_Zone_36N",GEOGCS["GCS_WGS_1984",DATUM["D_WGS_1984",SPHEROID["WGS_1984",6378137.0,298.257223563]],PRIMEM["Greenwich",0.0],UNIT["Degree",0.0174532925199433]],PROJECTION["Transverse_Mercator"],PARAMETER["False_Easting",500000.0],PARAMETER["False_Northing",0.0],PARAMETER["Central_Meridian",33.0],PARAMETER["Scale_Factor",0.9996],PARAMETER["Latitude_Of_Origin",0.0],UNIT["Meter",1.0]]
+
+;UTM зона 37 (36°-42°)
+[UTM(37)]
+a=6378137
+f=298.257223563
+Scale=0.9996
+FalseEast=500000
+FalseNorth=0
+PrimeMeridian=-180
+AddZone=0
+CurrentZone=37
+ArcGIS=PROJCS["WGS_1984_UTM_Zone_37N",GEOGCS["GCS_WGS_1984",DATUM["D_WGS_1984",SPHEROID["WGS_1984",6378137.0,298.257223563]],PRIMEM["Greenwich",0.0],UNIT["Degree",0.0174532925199433]],PROJECTION["Transverse_Mercator"],PARAMETER["False_Easting",500000.0],PARAMETER["False_Northing",0.0],PARAMETER["Central_Meridian",39.0],PARAMETER["Scale_Factor",0.9996],PARAMETER["Latitude_Of_Origin",0.0],UNIT["Meter",1.0]]
+
+;СК63 зона 1 (22°-25°)
+[SK63(1)]
+a=6378245
+f=298.3
+Scale=1.0
+FalseEast=300000
+FalseNorth=-9214.688
+PrimeMeridian=22
+AddZone=1
+CurrentZone=1
+ZoneSize=3
+Helmert=25.0 -141 -78.5 0.0 -0.35 -0.736 0.0
+ArcGIS=PROJCS["Zone_1",GEOGCS["GCS_Krasovsky_1940",DATUM["D_Krasovsky_1940",SPHEROID["Krasovsky_1940",6378245.0,298.3]],PRIMEM["Greenwich",0.0],UNIT["Degree",0.0174532925199433]],PROJECTION["Gauss_Kruger"],PARAMETER["False_Easting",1300000.0],PARAMETER["False_Northing",-9214.688],PARAMETER["Central_Meridian",23.5],PARAMETER["Scale_Factor",1.0],PARAMETER["Latitude_Of_Origin",0.0],UNIT["Meter",1.0]]
+MapInfo=
+
+;СК63 зона 2 (25°-28°)
+[SK63(2)]
+a=6378245
+f=298.3
+Scale=1.0
+FalseEast=300000
+FalseNorth=-9214.688
+PrimeMeridian=22
+AddZone=1
+CurrentZone=2
+ZoneSize=3
+Helmert=25.0 -141 -78.5 0.0 -0.35 -0.736 0.0
+ArcGIS=PROJCS["Zone_2",GEOGCS["GCS_Krasovsky_1940",DATUM["D_Krasovsky_1940",SPHEROID["Krasovsky_1940",6378245.0,298.3]],PRIMEM["Greenwich",0.0],UNIT["Degree",0.0174532925199433]],PROJECTION["Gauss_Kruger"],PARAMETER["False_Easting",2300000.0],PARAMETER["False_Northing",-9214.688],PARAMETER["Central_Meridian",26.5],PARAMETER["Scale_Factor",1.0],PARAMETER["Latitude_Of_Origin",0.0],UNIT["Meter",1.0]]
+MapInfo=
+
+;СК63 зона 3 (28°-31°)
+[SK63(3)]
+a=6378245
+f=298.3
+Scale=1.0
+FalseEast=300000
+FalseNorth=-9214.688
+PrimeMeridian=22
+AddZone=1
+CurrentZone=3
+ZoneSize=3
+Helmert=25.0 -141 -78.5 0.0 -0.35 -0.736 0.0
+ArcGIS=PROJCS["Zone_3",GEOGCS["GCS_Krasovsky_1940",DATUM["D_Krasovsky_1940",SPHEROID["Krasovsky_1940",6378245.0,298.3]],PRIMEM["Greenwich",0.0],UNIT["Degree",0.0174532925199433]],PROJECTION["Gauss_Kruger"],PARAMETER["False_Easting",3300000.0],PARAMETER["False_Northing",-9214.688],PARAMETER["Central_Meridian",29.5],PARAMETER["Scale_Factor",1.0],PARAMETER["Latitude_Of_Origin",0.0],UNIT["Meter",1.0]]
+MapInfo=
+
+;СК63 зона 4 (31°-34°)
+[SK63(4)]
+a=6378245
+f=298.3
+Scale=1.0
+FalseEast=300000
+FalseNorth=-9214.688
+PrimeMeridian=22
+AddZone=1
+CurrentZone=4
+ZoneSize=3
+Helmert=25.0 -141 -78.5 0.0 -0.35 -0.736 0.0
+ArcGIS=PROJCS["Zone_4",GEOGCS["GCS_Krasovsky_1940",DATUM["D_Krasovsky_1940",SPHEROID["Krasovsky_1940",6378245.0,298.3]],PRIMEM["Greenwich",0.0],UNIT["Degree",0.0174532925199433]],PROJECTION["Gauss_Kruger"],PARAMETER["False_Easting",4300000.0],PARAMETER["False_Northing",-9214.688],PARAMETER["Central_Meridian",32.5],PARAMETER["Scale_Factor",1.0],PARAMETER["Latitude_Of_Origin",0.0],UNIT["Meter",1.0]]
+MapInfo=
+
+;СК63 зона 5 (34°-37°)
+[SK63(5)]
+a=6378245
+f=298.3
+Scale=1.0
+FalseEast=300000
+FalseNorth=-9214.688
+PrimeMeridian=22
+AddZone=1
+CurrentZone=5
+ZoneSize=3
+Helmert=25.0 -141 -78.5 0.0 -0.35 -0.736 0.0
+ArcGIS=PROJCS["Zone_5",GEOGCS["GCS_Krasovsky_1940",DATUM["D_Krasovsky_1940",SPHEROID["Krasovsky_1940",6378245.0,298.3]],PRIMEM["Greenwich",0.0],UNIT["Degree",0.0174532925199433]],PROJECTION["Gauss_Kruger"],PARAMETER["False_Easting",5300000.0],PARAMETER["False_Northing",-9214.688],PARAMETER["Central_Meridian",35.5],PARAMETER["Scale_Factor",1.0],PARAMETER["Latitude_Of_Origin",0.0],UNIT["Meter",1.0]]
+MapInfo=
+
+;СК63 зона 6 (37°-40°)
+[SK63(6)]
+a=6378245
+f=298.3
+Scale=1.0
+FalseEast=300000
+FalseNorth=-9214.688
+PrimeMeridian=22
+AddZone=1
+CurrentZone=6
+ZoneSize=3
+Helmert=25.0 -141 -78.5 0.0 -0.35 -0.736 0.0
+ArcGIS=PROJCS["Zone_6",GEOGCS["GCS_Krasovsky_1940",DATUM["D_Krasovsky_1940",SPHEROID["Krasovsky_1940",6378245.0,298.3]],PRIMEM["Greenwich",0.0],UNIT["Degree",0.0174532925199433]],PROJECTION["Gauss_Kruger"],PARAMETER["False_Easting",6300000.0],PARAMETER["False_Northing",-9214.688],PARAMETER["Central_Meridian",38.5],PARAMETER["Scale_Factor",1.0],PARAMETER["Latitude_Of_Origin",0.0],UNIT["Meter",1.0]]
+MapInfo=
+
+;Широта/долгота на эллипсоиде Красовского в прямоугольные СК42
+[Pulkovo-42]
+a=6378245
+f=298.3
+Scale=1.0
+FalseEast=500000
+FalseNorth=0
+PrimeMeridian=0
+AddZone=1
+
+[Pulkovo-42(SK63)]
+a=6378245
+f=298.3
+Scale=1.0
+FalseEast=300000
+FalseNorth=-9214.688
+PrimeMeridian=22
+AddZone=1
+ZoneSize=3
+
+[Pulkovo-42 (SK63 район C)]
+a=6378245
+f=298.3
+Scale=1.0
+FalseEast=250000
+FalseNorth=-11057.701
+PrimeMeridian=23.45
+AddZone=1
+ZoneSize=3
+
+[Широта/долгота]
+
+
+;Местная система координат на базе СК63
+;Для перехода из/в СК63 используются связующие точки (TiePoints)
+;координаты которых известны в обоих системах координат
+;В данном примере задана одна связующая точка, "отрезающая" старшие
+;цифры координат СК63
+[Местная]
+a=6378245
+f=298.3
+Scale=1.0
+FalseEast=300000
+FalseNorth=-9214.688
+PrimeMeridian=22
+AddZone=1
+CurrentZone=3
+ZoneSize=3
+Helmert=25.0 -141 -78.5 0.0 -0.35 -0.736 0.0
+TiePoint1=5000000	3000000	0 0	0	0

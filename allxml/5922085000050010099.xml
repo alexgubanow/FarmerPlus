@@ -1,0 +1,718 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UkrainianCadastralExchangeFile>
+  <AdditionalPart>
+    <ServiceInfo>
+      <FileID>
+        <FileDate>2014-10-13</FileDate>
+        <FileGUID>F569CFA4-964C-4AA4-9B62-80EF78E3B4D3</FileGUID>
+      </FileID>
+      <FormatVersion>1.0</FormatVersion>
+      <ReceiverName>фізична особа-підприємець Петропавловська І.О.</ReceiverName>
+      <Software>Digitals</Software>
+      <SoftwareVersion>2013.08.13</SoftwareVersion>
+    </ServiceInfo>
+    <InfoLandWork>
+      <Executor>
+        <CompanyName>Петропавловська І.О.</CompanyName>
+        <EDRPOU>00000000</EDRPOU>
+        <License>
+          <LicenseSeries>АГ</LicenseSeries>
+          <LicenseNumber>999703</LicenseNumber>
+          <LicenseIssuedDate>2014-07-29</LicenseIssuedDate>
+        </License>
+        <Chief>
+          <ChiefName>
+            <LastName>Петропавловська</LastName>
+            <FirstName>Ірина</FirstName>
+            <MiddleName>Олександрівна</MiddleName>
+          </ChiefName>
+          <ChiefPosition>фізична особа-підприємець</ChiefPosition>
+        </Chief>
+        <Executor>
+          <ExecutorName>
+            <LastName>Петропавловська</LastName>
+            <FirstName>Ірина</FirstName>
+            <MiddleName>Олександрівна</MiddleName>
+          </ExecutorName>
+          <ExecutorPosition>інженер-землевпорядник</ExecutorPosition>
+          <ContactInfo>
+            <Phone />
+          </ContactInfo>
+        </Executor>
+        <Address>
+          <Country>804</Country>
+          <ZIP>51906</ZIP>
+          <Region>Дніпропетровська обл.</Region>
+          <District />
+          <Settlement>м.Дніпродзержинськ</Settlement>
+          <Street>Дунайська</Street>
+          <Building>45</Building>
+          <Block>-</Block>
+          <BuildingUnit>84</BuildingUnit>
+        </Address>
+      </Executor>
+    </InfoLandWork>
+  </AdditionalPart>
+  <InfoPart>
+    <MetricInfo>
+      <CoordinateSystem>
+        <SC63>
+          <X></X>
+        </SC63>
+      </CoordinateSystem>
+      <HeightSystem>
+        <Baltic></Baltic>
+      </HeightSystem>
+      <MeasurementUnit>
+        <M></M>
+      </MeasurementUnit>
+      <PointInfo>
+        <Point>
+          <UIDP>1</UIDP>
+          <DeterminationMethod>
+            <Survey></Survey>
+          </DeterminationMethod>
+          <PN>1</PN>
+          <X>5672476.170</X>
+          <Y>4355822.200</Y>
+          <MX>0.05</MX>
+          <MY>0.05</MY>
+        </Point>
+        <Point>
+          <UIDP>2</UIDP>
+          <DeterminationMethod>
+            <Survey></Survey>
+          </DeterminationMethod>
+          <PN>2</PN>
+          <X>5672335.770</X>
+          <Y>4355812.410</Y>
+          <MX>0.05</MX>
+          <MY>0.05</MY>
+        </Point>
+        <Point>
+          <UIDP>3</UIDP>
+          <DeterminationMethod>
+            <Survey></Survey>
+          </DeterminationMethod>
+          <PN>3</PN>
+          <X>5672335.570</X>
+          <Y>4355811.690</Y>
+          <MX>0.05</MX>
+          <MY>0.05</MY>
+        </Point>
+        <Point>
+          <UIDP>4</UIDP>
+          <DeterminationMethod>
+            <Survey></Survey>
+          </DeterminationMethod>
+          <PN>4</PN>
+          <X>5672309.360</X>
+          <Y>4355718.470</Y>
+          <MX>0.05</MX>
+          <MY>0.05</MY>
+        </Point>
+        <Point>
+          <UIDP>5</UIDP>
+          <DeterminationMethod>
+            <Survey></Survey>
+          </DeterminationMethod>
+          <PN>5</PN>
+          <X>5672454.300</X>
+          <Y>4355728.580</Y>
+          <MX>0.05</MX>
+          <MY>0.05</MY>
+        </Point>
+        <Point>
+          <UIDP>6</UIDP>
+          <DeterminationMethod>
+            <Survey></Survey>
+          </DeterminationMethod>
+          <PN>6</PN>
+          <X>5672479.540</X>
+          <Y>4355728.660</Y>
+          <MX>0.05</MX>
+          <MY>0.05</MY>
+        </Point>
+        <Point>
+          <UIDP>7</UIDP>
+          <DeterminationMethod>
+            <Survey></Survey>
+          </DeterminationMethod>
+          <PN>7</PN>
+          <X>5672488.360</X>
+          <Y>4355874.360</Y>
+          <MX>0.05</MX>
+          <MY>0.05</MY>
+        </Point>
+        <Point>
+          <UIDP>8</UIDP>
+          <DeterminationMethod>
+            <Survey></Survey>
+          </DeterminationMethod>
+          <PN>8</PN>
+          <X>5672361.900</X>
+          <Y>4355905.330</Y>
+          <MX>0.05</MX>
+          <MY>0.05</MY>
+        </Point>
+        <Point>
+          <UIDP>9</UIDP>
+          <DeterminationMethod>
+            <Survey></Survey>
+          </DeterminationMethod>
+          <PN>9</PN>
+          <X>5672143.850</X>
+          <Y>4355804.280</Y>
+          <MX>0.05</MX>
+          <MY>0.05</MY>
+        </Point>
+        <Point>
+          <UIDP>10</UIDP>
+          <DeterminationMethod>
+            <Survey></Survey>
+          </DeterminationMethod>
+          <PN>10</PN>
+          <X>5672125.670</X>
+          <Y>4355705.640</Y>
+          <MX>0.05</MX>
+          <MY>0.05</MY>
+        </Point>
+      </PointInfo>
+      <Polyline>
+        <PL>
+          <ULID>1</ULID>
+          <Points>
+            <P>1</P>
+            <P>2</P>
+          </Points>
+          <Length>140.74</Length>
+        </PL>
+        <PL>
+          <ULID>2</ULID>
+          <Points>
+            <P>2</P>
+            <P>3</P>
+          </Points>
+          <Length>0.75</Length>
+        </PL>
+        <PL>
+          <ULID>3</ULID>
+          <Points>
+            <P>3</P>
+            <P>4</P>
+          </Points>
+          <Length>96.83</Length>
+        </PL>
+        <PL>
+          <ULID>4</ULID>
+          <Points>
+            <P>4</P>
+            <P>5</P>
+          </Points>
+          <Length>145.29</Length>
+        </PL>
+        <PL>
+          <ULID>5</ULID>
+          <Points>
+            <P>5</P>
+            <P>1</P>
+          </Points>
+          <Length>96.14</Length>
+        </PL>
+        <PL>
+          <ULID>6</ULID>
+          <Points>
+            <P>6</P>
+            <P>5</P>
+          </Points>
+          <Length>25.24</Length>
+        </PL>
+        <PL>
+          <ULID>7</ULID>
+          <Points>
+            <P>1</P>
+            <P>7</P>
+          </Points>
+          <Length>53.57</Length>
+        </PL>
+        <PL>
+          <ULID>8</ULID>
+          <Points>
+            <P>2</P>
+            <P>8</P>
+          </Points>
+          <Length>96.52</Length>
+        </PL>
+        <PL>
+          <ULID>9</ULID>
+          <Points>
+            <P>3</P>
+            <P>9</P>
+          </Points>
+          <Length>191.86</Length>
+        </PL>
+        <PL>
+          <ULID>10</ULID>
+          <Points>
+            <P>4</P>
+            <P>10</P>
+          </Points>
+          <Length>184.14</Length>
+        </PL>
+      </Polyline>
+      <ControlPoint>
+        <P>1</P>
+        <P>2</P>
+      </ControlPoint>
+    </MetricInfo>
+    <CadastralZoneInfo>
+      <KOATUU>5922085000</KOATUU>
+      <CadastralZoneNumber>05</CadastralZoneNumber>
+      <CadastralQuarters>
+        <CadastralQuarterInfo>
+          <Parcels>
+            <ParcelInfo>
+              <ParcelLocationInfo>
+                <Region>Сумська область</Region>
+                <Settlement>Кузьківська сільська рада</Settlement>
+                <District>Конотопський район</District>
+                <ParcelLocation>
+                  <Rural></Rural>
+                </ParcelLocation>
+              </ParcelLocationInfo>
+              <CategoryPurposeInfo>
+                <Category>100</Category>
+                <Purpose>01.01</Purpose>
+                <Use>земельна частка (пай)</Use>
+              </CategoryPurposeInfo>
+              <OwnershipInfo>
+                <Code>100</Code>
+              </OwnershipInfo>
+              <ParcelMetricInfo>
+                <ParcelID>0099</ParcelID>
+                <Area>
+                  <MeasurementUnit>га</MeasurementUnit>
+                  <Size>1.3139</Size>
+                </Area>
+                <Error>8.29</Error>
+                <Externals>
+                  <Boundary>
+                    <Lines>
+                      <Line>
+                        <ULID>1</ULID>
+                      </Line>
+                      <Line>
+                        <ULID>2</ULID>
+                      </Line>
+                      <Line>
+                        <ULID>3</ULID>
+                      </Line>
+                      <Line>
+                        <ULID>4</ULID>
+                      </Line>
+                      <Line>
+                        <ULID>5</ULID>
+                      </Line>
+                    </Lines>
+                    <Closed>true</Closed>
+                  </Boundary>
+                </Externals>
+              </ParcelMetricInfo>
+              <Proprietors>
+                <ProprietorInfo>
+                  <Authentication>
+                    <NaturalPerson>
+                      <FullName>
+                        <LastName>Бондаренко</LastName>
+                        <FirstName>Валентина</FirstName>
+                        <MiddleName>Михайлівна</MiddleName>
+                      </FullName>
+                      <TaxNumber>1741028325</TaxNumber>
+                      <Passport>
+                        <DocumentType>Паспорт громадянина України</DocumentType>
+                        <PassportNumber>109965</PassportNumber>
+                        <PassportIssuedDate>2002-11-28</PassportIssuedDate>
+                        <IssuanceAuthority>Конотопським МРВ УМВС України в Сумській області</IssuanceAuthority>
+                        <PassportSeries>МВ</PassportSeries>
+                      </Passport>
+                      <Citizenship>804</Citizenship>
+                      <Address>
+                        <Country>804</Country>
+                        <Region>Сумська область</Region>
+                        <District>Конотопський район</District>
+                        <Settlement>с.Кузьки</Settlement>
+                        <Street />
+                        <Building />
+                      </Address>
+                    </NaturalPerson>
+                  </Authentication>
+                  <ProprietorCode>20</ProprietorCode>
+                  <PropertyAcquisitionJustification>
+                    <Document>002</Document>
+                    <DocumentDate>2002-03-20</DocumentDate>
+                    <DocumentNumber>108</DocumentNumber>
+                    <ApprovalAuthority />
+                  </PropertyAcquisitionJustification>
+                </ProprietorInfo>
+              </Proprietors>
+              <TechnicalDocumentationInfo>
+                <DocumentationType>006</DocumentationType>
+                <DraftingDate>2013-08-02</DraftingDate>
+                <RegistrationData>
+                  <BookNumber>1111</BookNumber>
+                  <RegistrationDate>2015-03-17</RegistrationDate>
+                  <RegistrationAuthority>управління Держземагентства у Конотопському районі</RegistrationAuthority>
+                </RegistrationData>
+                <DocumentList>007</DocumentList>
+                <DocumentList>019</DocumentList>
+                <DocumentList>022</DocumentList>
+                <DocumentList>041</DocumentList>
+                <DocumentList>042</DocumentList>
+                <DocumentList>046</DocumentList>
+              </TechnicalDocumentationInfo>
+              <StateActInfo>
+                <StateActType>2</StateActType>
+                <StateActForm>
+                  <Series>І-СМ</Series>
+                  <Number>035612</Number>
+                </StateActForm>
+                <StateActRegistrationInfo>
+                  <RegistrationBookNumber>1</RegistrationBookNumber>
+                  <SectionNumber>2</SectionNumber>
+                  <RegistrationNumber>232</RegistrationNumber>
+                  <RegistrationDate>2002-03-29</RegistrationDate>
+                  <RegistrationPersonInfo>
+                    <SignedByName>
+                      <LastName>Калита</LastName>
+                      <FirstName>Василь</FirstName>
+                      <MiddleName>Григорович</MiddleName>
+                    </SignedByName>
+                    <SignedByName>
+                      <LastName>Пацак</LastName>
+                      <FirstName>Свiтлана</FirstName>
+                      <MiddleName>Iванiвна</MiddleName>
+                    </SignedByName>
+                    <SignedByPosition>Голова Конотопської райдержадміністрації</SignedByPosition>
+                    <SignedByPosition>Начальник державного органу земельних ресурсів</SignedByPosition>
+                    <RegisteredBy>
+                      <LastName />
+                      <FirstName />
+                    </RegisteredBy>
+                    <RegisteredByPosition>реєстратор</RegisteredByPosition>
+                  </RegistrationPersonInfo>
+                </StateActRegistrationInfo>
+                <DeliveryDate>2002-03-29</DeliveryDate>
+                <DeliveryPerson>
+                  <NaturalPerson>
+                    <FullName>
+                      <LastName />
+                      <FirstName />
+                    </FullName>
+                    <Passport>
+                      <DocumentType />
+                      <PassportNumber />
+                      <PassportIssuedDate>2002-03-29</PassportIssuedDate>
+                      <IssuanceAuthority />
+                      <PassportSeries />
+                    </Passport>
+                    <Address>
+                      <Country>804</Country>
+                      <Region />
+                      <District />
+                      <Settlement />
+                      <Street />
+                      <Building />
+                    </Address>
+                  </NaturalPerson>
+                </DeliveryPerson>
+                <EntitlementDocument>
+                  <Document>002</Document>
+                  <DocumentDate>2002-03-20</DocumentDate>
+                  <DocumentNumber>108</DocumentNumber>
+                </EntitlementDocument>
+              </StateActInfo>
+              <LandsParcel>
+                <LandParcelInfo>
+                  <CadastralCode></CadastralCode>
+                  <LandCode>001.01</LandCode>
+                  <MetricInfo>
+                    <Area>
+                      <MeasurementUnit>га</MeasurementUnit>
+                      <Size>1.3139</Size>
+                    </Area>
+                    <Perimeter>479.75</Perimeter>
+                    <Error>12.80</Error>
+                    <Externals>
+                      <Boundary>
+                        <Lines>
+                          <Line>
+                            <ULID>1</ULID>
+                          </Line>
+                          <Line>
+                            <ULID>2</ULID>
+                          </Line>
+                          <Line>
+                            <ULID>3</ULID>
+                          </Line>
+                          <Line>
+                            <ULID>4</ULID>
+                          </Line>
+                          <Line>
+                            <ULID>5</ULID>
+                          </Line>
+                        </Lines>
+                        <Closed>true</Closed>
+                      </Boundary>
+                    </Externals>
+                  </MetricInfo>
+                </LandParcelInfo>
+              </LandsParcel>
+              <AdjacentUnits>
+                <AdjacentUnitInfo>
+                  <AdjacentBoundary>
+                    <Lines>
+                      <Line>
+                        <ULID>7</ULID>
+                        <FP>7</FP>
+                        <TP>1</TP>
+                      </Line>
+                      <Line>
+                        <ULID>1</ULID>
+                      </Line>
+                      <Line>
+                        <ULID>8</ULID>
+                      </Line>
+                    </Lines>
+                    <Closed>false</Closed>
+                  </AdjacentBoundary>
+                  <Proprietor>
+                    <NaturalPerson>
+                      <FullName>
+                        <LastName>Бондаренко</LastName>
+                        <FirstName>Григорій</FirstName>
+                        <MiddleName>Семенович</MiddleName>
+                      </FullName>
+                      <Passport>
+                        <DocumentType />
+                        <PassportNumber />
+                        <PassportIssuedDate>2011-11-07</PassportIssuedDate>
+                        <IssuanceAuthority />
+                        <PassportSeries />
+                      </Passport>
+                      <Address>
+                        <Country>804</Country>
+                        <Region />
+                        <District />
+                        <Settlement />
+                        <Street />
+                        <Building />
+                      </Address>
+                    </NaturalPerson>
+                  </Proprietor>
+                  <AdditionalInfoBlock>
+                    <AdditionalInfo>земельна ділянка гр. Бондаренко Григорій Семенович № 113</AdditionalInfo>
+                  </AdditionalInfoBlock>
+                </AdjacentUnitInfo>
+                <AdjacentUnitInfo>
+                  <AdjacentBoundary>
+                    <Lines>
+                      <Line>
+                        <ULID>8</ULID>
+                        <FP>8</FP>
+                        <TP>2</TP>
+                      </Line>
+                      <Line>
+                        <ULID>2</ULID>
+                      </Line>
+                      <Line>
+                        <ULID>9</ULID>
+                      </Line>
+                    </Lines>
+                    <Closed>false</Closed>
+                  </AdjacentBoundary>
+                  <Proprietor>
+                    <NaturalPerson>
+                      <FullName>
+                        <LastName>Кузько</LastName>
+                        <FirstName>Ольга</FirstName>
+                        <MiddleName>Григорівна</MiddleName>
+                      </FullName>
+                      <Passport>
+                        <DocumentType />
+                        <PassportNumber />
+                        <PassportIssuedDate>2011-11-07</PassportIssuedDate>
+                        <IssuanceAuthority />
+                        <PassportSeries />
+                      </Passport>
+                      <Address>
+                        <Country>804</Country>
+                        <Region />
+                        <District />
+                        <Settlement />
+                        <Street />
+                        <Building />
+                      </Address>
+                    </NaturalPerson>
+                  </Proprietor>
+                  <AdditionalInfoBlock>
+                    <AdditionalInfo>земельна ділянка гр. Кузько Ольга Григорівна № 123</AdditionalInfo>
+                  </AdditionalInfoBlock>
+                </AdjacentUnitInfo>
+                <AdjacentUnitInfo>
+                  <AdjacentBoundary>
+                    <Lines>
+                      <Line>
+                        <ULID>9</ULID>
+                        <FP>9</FP>
+                        <TP>3</TP>
+                      </Line>
+                      <Line>
+                        <ULID>3</ULID>
+                      </Line>
+                      <Line>
+                        <ULID>10</ULID>
+                      </Line>
+                    </Lines>
+                    <Closed>false</Closed>
+                  </AdjacentBoundary>
+                  <Proprietor>
+                    <NaturalPerson>
+                      <FullName>
+                        <LastName>Кузько</LastName>
+                        <FirstName>Анатолій</FirstName>
+                        <MiddleName>Борисович</MiddleName>
+                      </FullName>
+                      <Passport>
+                        <DocumentType />
+                        <PassportNumber />
+                        <PassportIssuedDate>2011-11-07</PassportIssuedDate>
+                        <IssuanceAuthority />
+                        <PassportSeries />
+                      </Passport>
+                      <Address>
+                        <Country>804</Country>
+                        <Region />
+                        <District />
+                        <Settlement />
+                        <Street />
+                        <Building />
+                      </Address>
+                    </NaturalPerson>
+                  </Proprietor>
+                  <AdditionalInfoBlock>
+                    <AdditionalInfo>земельна ділянка гр. Кузько Анатолій Борисович №124</AdditionalInfo>
+                  </AdditionalInfoBlock>
+                </AdjacentUnitInfo>
+                <AdjacentUnitInfo>
+                  <AdjacentBoundary>
+                    <Lines>
+                      <Line>
+                        <ULID>10</ULID>
+                        <FP>10</FP>
+                        <TP>4</TP>
+                      </Line>
+                      <Line>
+                        <ULID>4</ULID>
+                      </Line>
+                      <Line>
+                        <ULID>6</ULID>
+                        <FP>5</FP>
+                        <TP>6</TP>
+                      </Line>
+                    </Lines>
+                    <Closed>false</Closed>
+                  </AdjacentBoundary>
+                  <Proprietor>
+                    <LegalEntity>
+                      <Name>Конотопська районна державна адміністрація</Name>
+                      <EDRPOU>04058143</EDRPOU>
+                      <Address>
+                        <Country>804</Country>
+                        <Region>Сумська область</Region>
+                        <District />
+                        <Settlement>місто Конотоп</Settlement>
+                        <Street>Соборна</Street>
+                        <Building>23</Building>
+                      </Address>
+                    </LegalEntity>
+                  </Proprietor>
+                  <AdditionalInfoBlock>
+                    <AdditionalInfo>земельна ділянка Конотопської районної державної адміністрації (лісосмуга)</AdditionalInfo>
+                  </AdditionalInfoBlock>
+                </AdjacentUnitInfo>
+                <AdjacentUnitInfo>
+                  <AdjacentBoundary>
+                    <Lines>
+                      <Line>
+                        <ULID>6</ULID>
+                      </Line>
+                      <Line>
+                        <ULID>5</ULID>
+                      </Line>
+                      <Line>
+                        <ULID>7</ULID>
+                      </Line>
+                    </Lines>
+                    <Closed>false</Closed>
+                  </AdjacentBoundary>
+                  <Proprietor>
+                    <LegalEntity>
+                      <Name>Конотопська районна державна адміністрація</Name>
+                      <EDRPOU>04058143</EDRPOU>
+                      <Address>
+                        <Country>804</Country>
+                        <Region>Сумська область</Region>
+                        <District />
+                        <Settlement>місто Конотоп</Settlement>
+                        <Street>Соборна</Street>
+                        <Building>23</Building>
+                      </Address>
+                    </LegalEntity>
+                  </Proprietor>
+                  <AdditionalInfoBlock>
+                    <AdditionalInfo>земельна ділянка Конотопської районної державної адміністрації (дорога)</AdditionalInfo>
+                  </AdditionalInfoBlock>
+                </AdjacentUnitInfo>
+              </AdjacentUnits>
+            </ParcelInfo>
+          </Parcels>
+          <CadastralQuarterNumber>001</CadastralQuarterNumber>
+          <RegionalContacts>
+            <LocalAuthorityHead>
+              <LastName>Горбенко</LastName>
+              <FirstName>Микола</FirstName>
+              <MiddleName>Миколайович</MiddleName>
+            </LocalAuthorityHead>
+            <DKZRHead>
+              <LastName>Сопрун</LastName>
+              <FirstName>Ірина</FirstName>
+              <MiddleName>Iванiвна</MiddleName>
+            </DKZRHead>
+          </RegionalContacts>
+          <Externals>
+            <Boundary>
+              <Lines>
+                <Line>
+                  <ULID>1</ULID>
+                </Line>
+                <Line>
+                  <ULID>2</ULID>
+                </Line>
+                <Line>
+                  <ULID>3</ULID>
+                </Line>
+                <Line>
+                  <ULID>4</ULID>
+                </Line>
+                <Line>
+                  <ULID>5</ULID>
+                </Line>
+              </Lines>
+              <Closed>true</Closed>
+            </Boundary>
+          </Externals>
+        </CadastralQuarterInfo>
+      </CadastralQuarters>
+    </CadastralZoneInfo>
+  </InfoPart>
+</UkrainianCadastralExchangeFile>

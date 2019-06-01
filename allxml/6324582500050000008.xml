@@ -1,0 +1,529 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UkrainianCadastralExchangeFile>
+  <AdditionalPart>
+    <ServiceInfo>
+      <FileID>
+        <FileDate>2012-06-11</FileDate>
+        <FileGUID>1CF3838E-1A22-40C2-AA05-DA745F917DA1</FileGUID>
+      </FileID>
+      <FormatVersion>0.7</FormatVersion>
+      <ReceiverName>Харківська регіональна філія Державне підприємство  "Центр Державного земельного кадастру"</ReceiverName>
+      <Software>Геодезична Інформаційна Система</Software>
+      <SoftwareVersion>6.1.4.5</SoftwareVersion>
+    </ServiceInfo>
+    <InfoLandWork>
+      <Executor>
+        <CompanyName>Товариство з обмеженою відповідальністю "Парус Гео"</CompanyName>
+        <EDRPOU>37327505</EDRPOU>
+        <License>
+          <LicenseSeries>АГ</LicenseSeries>
+          <LicenseNumber>579475</LicenseNumber>
+          <LicenseIssuedDate>2012-02-16</LicenseIssuedDate>
+        </License>
+        <Chief>
+          <ChiefName>
+            <LastName>Косенко</LastName>
+            <FirstName>Олександр</FirstName>
+            <MiddleName>Анатолійович</MiddleName>
+          </ChiefName>
+          <ChiefPosition>керівник</ChiefPosition>
+        </Chief>
+        <Executor>
+          <ExecutorName>
+            <LastName>Семендяєв</LastName>
+            <FirstName>Андрій</FirstName>
+            <MiddleName>Миколайович</MiddleName>
+          </ExecutorName>
+          <ExecutorPosition>інженер-землевпорядник</ExecutorPosition>
+          <ContactInfo>
+            <Phone>(05748)31342</Phone>
+            <Email>parusgeo2011@yandex.ru</Email>
+          </ContactInfo>
+        </Executor>
+        <Address>
+          <Country>804</Country>
+          <ZIP>64102</ZIP>
+          <Region>Харківська область</Region>
+          <District />
+          <Settlement>місто Первомайський</Settlement>
+          <Street>мікрорайон 1/2</Street>
+          <Building>56</Building>
+          <BuildingUnit>7</BuildingUnit>
+        </Address>
+      </Executor>
+    </InfoLandWork>
+  </AdditionalPart>
+  <InfoPart>
+    <MetricInfo>
+      <CoordinateSystem>
+        <SC63>
+          <X></X>
+        </SC63>
+      </CoordinateSystem>
+      <HeightSystem>
+        <Baltic77></Baltic77>
+      </HeightSystem>
+      <MeasurementUnit>
+        <M></M>
+      </MeasurementUnit>
+      <PointInfo>
+        <Point>
+          <UIDP>1</UIDP>
+          <PN>1</PN>
+          <DeterminationMethod>
+            <Survey></Survey>
+          </DeterminationMethod>
+          <X>5460667.291</X>
+          <Y>5347985.707</Y>
+          <MX>0.05</MX>
+          <MY>0.05</MY>
+        </Point>
+        <Point>
+          <UIDP>2</UIDP>
+          <PN>2</PN>
+          <DeterminationMethod>
+            <Survey></Survey>
+          </DeterminationMethod>
+          <X>5460857.818</X>
+          <Y>5347713.606</Y>
+          <MX>0.05</MX>
+          <MY>0.05</MY>
+        </Point>
+        <Point>
+          <UIDP>3</UIDP>
+          <PN>3</PN>
+          <DeterminationMethod>
+            <Survey></Survey>
+          </DeterminationMethod>
+          <X>5460877.004</X>
+          <Y>5347728.017</Y>
+          <MX>0.05</MX>
+          <MY>0.05</MY>
+        </Point>
+        <Point>
+          <UIDP>4</UIDP>
+          <PN>4</PN>
+          <DeterminationMethod>
+            <Survey></Survey>
+          </DeterminationMethod>
+          <X>5460951.906</X>
+          <Y>5347788.502</Y>
+          <MX>0.05</MX>
+          <MY>0.05</MY>
+        </Point>
+        <Point>
+          <UIDP>5</UIDP>
+          <PN>5</PN>
+          <DeterminationMethod>
+            <Survey></Survey>
+          </DeterminationMethod>
+          <X>5461004.438</X>
+          <Y>5347835.798</Y>
+          <MX>0.05</MX>
+          <MY>0.05</MY>
+        </Point>
+        <Point>
+          <UIDP>6</UIDP>
+          <PN>6</PN>
+          <DeterminationMethod>
+            <Survey></Survey>
+          </DeterminationMethod>
+          <X>5460819.276</X>
+          <Y>5348100.236</Y>
+          <MX>0.05</MX>
+          <MY>0.05</MY>
+        </Point>
+        <Point>
+          <UIDP>7</UIDP>
+          <PN>7</PN>
+          <DeterminationMethod>
+            <Survey></Survey>
+          </DeterminationMethod>
+          <X>5460771.807</X>
+          <Y>5348064.465</Y>
+          <MX>0.05</MX>
+          <MY>0.05</MY>
+        </Point>
+        <Point>
+          <UIDP>13</UIDP>
+          <PN>13</PN>
+          <DeterminationMethod>
+            <Survey></Survey>
+          </DeterminationMethod>
+          <X>5460953.271</X>
+          <Y>5347908.872</Y>
+          <MX>0.05</MX>
+          <MY>0.05</MY>
+        </Point>
+        <Point>
+          <UIDP>14</UIDP>
+          <PN>14</PN>
+          <DeterminationMethod>
+            <Survey></Survey>
+          </DeterminationMethod>
+          <X>5460798.777</X>
+          <Y>5347797.925</Y>
+          <MX>0.05</MX>
+          <MY>0.05</MY>
+        </Point>
+      </PointInfo>
+      <Polyline>
+        <PL>
+          <ULID>1</ULID>
+          <Points>
+            <P>1</P>
+            <P>2</P>
+            <P>3</P>
+            <P>4</P>
+            <P>5</P>
+            <P>6</P>
+            <P>7</P>
+            <P>1</P>
+          </Points>
+          <Length>1036.26</Length>
+        </PL>
+        <PL>
+          <ULID>2</ULID>
+          <Points>
+            <P>2</P>
+            <P>3</P>
+            <P>4</P>
+            <P>5</P>
+            <P>13</P>
+            <P>14</P>
+            <P>2</P>
+          </Points>
+          <Length>573.3</Length>
+        </PL>
+        <PL>
+          <ULID>3</ULID>
+          <Points>
+            <P>1</P>
+            <P>2</P>
+          </Points>
+          <Length>332.17</Length>
+        </PL>
+        <PL>
+          <ULID>4</ULID>
+          <Points>
+            <P>2</P>
+            <P>3</P>
+            <P>4</P>
+            <P>5</P>
+            <P>6</P>
+            <P>7</P>
+            <P>1</P>
+          </Points>
+          <Length>704.09</Length>
+        </PL>
+      </Polyline>
+      <ControlPoint>
+        <P>1</P>
+        <P>2</P>
+        <P>3</P>
+        <P>4</P>
+        <P>5</P>
+        <P>6</P>
+        <P>7</P>
+      </ControlPoint>
+    </MetricInfo>
+    <CadastralZoneInfo>
+      <KOATUU>6324582500</KOATUU>
+      <CadastralZoneNumber>05</CadastralZoneNumber>
+      <CadastralQuarters>
+        <CadastralQuarterInfo>
+          <CadastralQuarterNumber>000</CadastralQuarterNumber>
+          <RegionalContacts>
+            <LocalAuthorityHead>
+              <LastName>Намчук</LastName>
+              <FirstName>Віктор</FirstName>
+              <MiddleName>Антонович</MiddleName>
+            </LocalAuthorityHead>
+            <DKZRHead>
+              <LastName>Логвиненко</LastName>
+              <FirstName>Олена</FirstName>
+              <MiddleName>Володимирiвна</MiddleName>
+            </DKZRHead>
+          </RegionalContacts>
+          <Parcels>
+            <ParcelInfo>
+              <ParcelLocationInfo>
+                <Region>Харківська область</Region>
+                <District>Первомайський район</District>
+                <Settlement>Грушинська сільська рада</Settlement>
+                <ParcelLocation>
+                  <Rural></Rural>
+                </ParcelLocation>
+                <AdditionalInfoBlock>
+                  <AdditionalInfo>село Грушине</AdditionalInfo>
+                </AdditionalInfoBlock>
+              </ParcelLocationInfo>
+              <CategoryPurposeInfo>
+                <Category>100</Category>
+                <Purpose>Для ведення товарного сільськогосподарського виробництва</Purpose>
+                <Use>для ведення товарного сільськогосподарського виробництва</Use>
+              </CategoryPurposeInfo>
+              <OwnershipInfo>
+                <Code>100</Code>
+              </OwnershipInfo>
+              <ParcelMetricInfo>
+                <ParcelID>0008</ParcelID>
+                <Area>
+                  <MeasurementUnit>га</MeasurementUnit>
+                  <Size>6.2585</Size>
+                  <DeterminationMethod>
+                    <ExhangeFileCoordinates></ExhangeFileCoordinates>
+                  </DeterminationMethod>
+                </Area>
+                <Error>0.0013</Error>
+                <Externals>
+                  <Boundary>
+                    <Lines>
+                      <Line>
+                        <ULID>1</ULID>
+                      </Line>
+                    </Lines>
+                    <Closed>true</Closed>
+                  </Boundary>
+                </Externals>
+              </ParcelMetricInfo>
+              <Proprietors>
+                <ProprietorInfo>
+                  <Authentication>
+                    <NaturalPerson>
+                      <FullName>
+                        <LastName>Ванюков</LastName>
+                        <FirstName>Іван</FirstName>
+                        <MiddleName>Якович</MiddleName>
+                      </FullName>
+                      <TaxNumber>2985812477</TaxNumber>
+                      <Passport>
+                        <DocumentType>Паспорт громадянина України</DocumentType>
+                        <PassportNumber>905375</PassportNumber>
+                        <PassportIssuedDate>1998-07-03</PassportIssuedDate>
+                        <IssuanceAuthority>Первомайським РВ УМВС України в Харківської області </IssuanceAuthority>
+                        <PassportSeries>МК</PassportSeries>
+                      </Passport>
+                      <Citizenship>804</Citizenship>
+                      <Address>
+                        <Country>804</Country>
+                        <ZIP>64131</ZIP>
+                        <Region>Харківська область</Region>
+                        <District>Первомайський район</District>
+                        <Settlement>село Грушине</Settlement>
+                        <Street>вулиця Шкільна</Street>
+                        <Building>9</Building>
+                      </Address>
+                    </NaturalPerson>
+                  </Authentication>
+                  <ProprietorCode>20</ProprietorCode>
+                  <AdditionalInfoBlock>
+                    <AdditionalInfo>Свідоцтво про право на спадщину за законом</AdditionalInfo>
+                  </AdditionalInfoBlock>
+                  <PropertyAcquisitionJustification>
+                    <Document>004</Document>
+                    <DocumentDate>2011-06-07</DocumentDate>
+                    <DocumentNumber>1-1099</DocumentNumber>
+                    <ApprovalAuthority>Первомайська державна нотаріальна контора Харківської області Мірошниченко О.М., ВРЛ № 080184</ApprovalAuthority>
+                  </PropertyAcquisitionJustification>
+                </ProprietorInfo>
+              </Proprietors>
+              <TechnicalDocumentationInfo>
+                <DocumentationType>006</DocumentationType>
+                <DraftingDate>2012-06-11</DraftingDate>
+                <DocumentList>001</DocumentList>
+                <DocumentList>002</DocumentList>
+                <DocumentList>007</DocumentList>
+                <DocumentList>017</DocumentList>
+                <DocumentList>022</DocumentList>
+                <DocumentList>040</DocumentList>
+                <DocumentList>041</DocumentList>
+                <DocumentList>042</DocumentList>
+                <DocumentList>Відомість коортинат точок</DocumentList>
+              </TechnicalDocumentationInfo>
+              <Restrictions>
+                <RestrictionInfo>
+                  <RestrictionCode>01.03</RestrictionCode>
+                  <RestrictionName>Охоронна зона навколо (вздовж) об'єкта транспорту</RestrictionName>
+                  <Externals>
+                    <Boundary>
+                      <Lines>
+                        <Line>
+                          <ULID>2</ULID>
+                        </Line>
+                      </Lines>
+                      <Closed>true</Closed>
+                    </Boundary>
+                  </Externals>
+                  <RestrictionEntitlement>
+                    <DocumentType>01</DocumentType>
+                    <DocumentName></DocumentName>
+                    <DocumentDate>1800-01-01</DocumentDate>
+                    <NaturalPerson>
+                      <FullName>
+                        <LastName></LastName>
+                        <FirstName></FirstName>
+                      </FullName>
+                      <Passport>
+                        <DocumentType>Паспорт громадянина України</DocumentType>
+                        <PassportNumber />
+                        <PassportIssuedDate>1800-01-01</PassportIssuedDate>
+                        <IssuanceAuthority />
+                        <PassportSeries />
+                      </Passport>
+                      <Citizenship>804</Citizenship>
+                      <Address>
+                        <Country>804</Country>
+                        <Region></Region>
+                        <District />
+                        <Settlement></Settlement>
+                        <Street />
+                        <Building />
+                      </Address>
+                    </NaturalPerson>
+                    <LegalEntity>
+                      <Name />
+                      <EDRPOU>00000000</EDRPOU>
+                      <Address>
+                        <Country>804</Country>
+                        <Region />
+                        <District />
+                        <Settlement />
+                        <Street />
+                        <Building />
+                      </Address>
+                    </LegalEntity>
+                  </RestrictionEntitlement>
+                  <RestrictionTerm>
+                    <Permanent>true</Permanent>
+                  </RestrictionTerm>
+                  <RegistrationDate>1800-01-01</RegistrationDate>
+                  <RegistrationNumber>0</RegistrationNumber>
+                  <Beneficiaries>
+                    <Beneficiary>
+                      <LegalEntity>
+                        <Name>Первомайська районна державна адміністрація</Name>
+                        <EDRPOU>23918373</EDRPOU>
+                        <Address>
+                          <Country>804</Country>
+                          <ZIP>64107</ZIP>
+                          <Region>Харківська область</Region>
+                          <District></District>
+                          <Settlement>місто Первомайський</Settlement>
+                          <Street>вулиця Леніна</Street>
+                          <Building>16</Building>
+                        </Address>
+                      </LegalEntity>
+                    </Beneficiary>
+                  </Beneficiaries>
+                  <Payment>
+                    <Free>true</Free>
+                  </Payment>
+                </RestrictionInfo>
+              </Restrictions>
+              <LandsParcel>
+                <LandParcelInfo>
+                  <CadastralCode>6324582500:05:000:0008</CadastralCode>
+                  <LandCode>05</LandCode>
+                  <MetricInfo>
+                    <Area>
+                      <MeasurementUnit>га</MeasurementUnit>
+                      <Size>6.2585</Size>
+                      <DeterminationMethod>
+                        <ExhangeFileCoordinates></ExhangeFileCoordinates>
+                      </DeterminationMethod>
+                    </Area>
+                    <Perimeter>1036.26</Perimeter>
+                    <Error>0.0013</Error>
+                    <Externals>
+                      <Boundary>
+                        <Lines>
+                          <Line>
+                            <ULID>1</ULID>
+                          </Line>
+                        </Lines>
+                        <Closed>true</Closed>
+                      </Boundary>
+                    </Externals>
+                  </MetricInfo>
+                </LandParcelInfo>
+              </LandsParcel>
+              <AdjacentUnits>
+                <AdjacentUnitInfo>
+                  <AdjacentBoundary>
+                    <Lines>
+                      <Line>
+                        <ULID>3</ULID>
+                        <FP>1</FP>
+                        <TP>2</TP>
+                      </Line>
+                    </Lines>
+                    <Closed>false</Closed>
+                  </AdjacentBoundary>
+                  <Proprietor>
+                    <NaturalPerson>
+                      <FullName>
+                        <LastName>Захарова</LastName>
+                        <FirstName>В.</FirstName>
+                        <MiddleName>Т.</MiddleName>
+                      </FullName>
+                      <Passport>
+                        <DocumentType>Паспорт громадянина України</DocumentType>
+                        <PassportNumber />
+                        <PassportIssuedDate>1800-01-01</PassportIssuedDate>
+                        <IssuanceAuthority />
+                        <PassportSeries />
+                      </Passport>
+                      <Citizenship>804</Citizenship>
+                      <Address>
+                        <Country>804</Country>
+                        <Region></Region>
+                        <District></District>
+                        <Settlement></Settlement>
+                        <Street />
+                        <Building />
+                      </Address>
+                    </NaturalPerson>
+                  </Proprietor>
+                  <AdditionalInfoBlock>
+                    <AdditionalInfo>землі гр. Захарова В.Т.</AdditionalInfo>
+                  </AdditionalInfoBlock>
+                </AdjacentUnitInfo>
+                <AdjacentUnitInfo>
+                  <AdjacentBoundary>
+                    <Lines>
+                      <Line>
+                        <ULID>4</ULID>
+                        <FP>2</FP>
+                        <TP>1</TP>
+                      </Line>
+                    </Lines>
+                    <Closed>false</Closed>
+                  </AdjacentBoundary>
+                  <Proprietor>
+                    <LegalEntity>
+                      <Name>Первомайська районна державна адміністрація Харківської області</Name>
+                      <EDRPOU>23918373</EDRPOU>
+                      <Address>
+                        <Country>804</Country>
+                        <ZIP>64107</ZIP>
+                        <Region>Харківська область</Region>
+                        <District />
+                        <Settlement>місто Первомайський</Settlement>
+                        <Street>вулиця Леніна</Street>
+                        <Building>16</Building>
+                      </Address>
+                    </LegalEntity>
+                  </Proprietor>
+                  <AdditionalInfoBlock>
+                    <AdditionalInfo>землі Грушинської сільської ради</AdditionalInfo>
+                  </AdditionalInfoBlock>
+                </AdjacentUnitInfo>
+              </AdjacentUnits>
+            </ParcelInfo>
+          </Parcels>
+        </CadastralQuarterInfo>
+      </CadastralQuarters>
+    </CadastralZoneInfo>
+  </InfoPart>
+</UkrainianCadastralExchangeFile>
