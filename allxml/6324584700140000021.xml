@@ -1,0 +1,684 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UkrainianCadastralExchangeFile>
+  <AdditionalPart>
+    <ServiceInfo>
+      <FileID>
+        <FileDate>2015-08-11</FileDate>
+        <FileGUID>ED7EAAF4-D50E-4821-8869-31E585B8E0D5</FileGUID>
+      </FileID>
+      <FormatVersion>0.7</FormatVersion>
+      <ReceiverName>Управління Держземагентства у Первомайському районі Харківської області</ReceiverName>
+      <ReceiverIdentifier>37706807</ReceiverIdentifier>
+      <Software>TreeZ</Software>
+      <SoftwareVersion>4.1.0.10484</SoftwareVersion>
+    </ServiceInfo>
+    <InfoLandWork>
+      <Executor>
+        <CompanyName>Державне підприємство "Український державний головний науково-дослідний і виробничий інститут інженерно-технічних і екологічних вишукувань "УкрНДІІНТВ"</CompanyName>
+        <EDRPOU>24481211</EDRPOU>
+        <License>
+          <LicenseSeries>АВ</LicenseSeries>
+          <LicenseNumber>440133</LicenseNumber>
+          <LicenseIssuedDate>2005-04-22</LicenseIssuedDate>
+        </License>
+        <Chief>
+          <ChiefName>
+            <LastName>Соколов</LastName>
+            <FirstName>В.</FirstName>
+            <MiddleName>А.</MiddleName>
+          </ChiefName>
+          <ChiefPosition>сертифікований інженер-землевпорядник</ChiefPosition>
+        </Chief>
+        <Executor>
+          <ExecutorName>
+            <LastName>Гумберідзе </LastName>
+            <FirstName>А.</FirstName>
+            <MiddleName>І.</MiddleName>
+          </ExecutorName>
+          <ExecutorPosition>інженер</ExecutorPosition>
+          <ContactInfo>
+            <Phone/>
+          </ContactInfo>
+        </Executor>
+        <Address>
+          <Country>804</Country>
+          <Region>Харківська область</Region>
+          <District/>
+          <Settlement>місто Харків Дзержинський район</Settlement>
+          <Street>проспект Леніна</Street>
+          <Building>38</Building>
+        </Address>
+      </Executor>
+    </InfoLandWork>
+  </AdditionalPart>
+  <InfoPart>
+    <MetricInfo>
+      <CoordinateSystem>
+        <SC63>
+          <X/>
+        </SC63>
+      </CoordinateSystem>
+      <HeightSystem>
+        <Baltic/>
+      </HeightSystem>
+      <MeasurementUnit>
+        <M/>
+      </MeasurementUnit>
+      <PointInfo>
+        <Point>
+          <UIDP>1</UIDP>
+          <PN>1263</PN>
+          <DeterminationMethod>
+            <Survey/>
+          </DeterminationMethod>
+          <X>5466430.42</X>
+          <Y>5344068.96</Y>
+          <MX>0.05</MX>
+          <MY>0.05</MY>
+        </Point>
+        <Point>
+          <UIDP>2</UIDP>
+          <PN>1264</PN>
+          <DeterminationMethod>
+            <Survey/>
+          </DeterminationMethod>
+          <X>5466157.44</X>
+          <Y>5344564.45</Y>
+          <MX>0.05</MX>
+          <MY>0.05</MY>
+        </Point>
+        <Point>
+          <UIDP>3</UIDP>
+          <PN>1262</PN>
+          <DeterminationMethod>
+            <Survey/>
+          </DeterminationMethod>
+          <X>5466076.11</X>
+          <Y>5344511.43</Y>
+          <MX>0.05</MX>
+          <MY>0.05</MY>
+        </Point>
+        <Point>
+          <UIDP>4</UIDP>
+          <PN>1261</PN>
+          <DeterminationMethod>
+            <Survey/>
+          </DeterminationMethod>
+          <X>5466349.73</X>
+          <Y>5344014.77</Y>
+          <MX>0.05</MX>
+          <MY>0.05</MY>
+        </Point>
+      </PointInfo>
+      <Polyline>
+        <PL>
+          <ULID>1</ULID>
+          <Points>
+            <P>1</P>
+            <P>2</P>
+          </Points>
+          <Length>565.71</Length>
+        </PL>
+        <PL>
+          <ULID>2</ULID>
+          <Points>
+            <P>2</P>
+            <P>3</P>
+          </Points>
+          <Length>97.09</Length>
+        </PL>
+        <PL>
+          <ULID>3</ULID>
+          <Points>
+            <P>3</P>
+            <P>4</P>
+          </Points>
+          <Length>567.04</Length>
+        </PL>
+        <PL>
+          <ULID>4</ULID>
+          <Points>
+            <P>4</P>
+            <P>1</P>
+          </Points>
+          <Length>97.2</Length>
+        </PL>
+      </Polyline>
+      <ControlPoint>
+        <P>1</P>
+        <P>2</P>
+        <P>3</P>
+        <P>4</P>
+      </ControlPoint>
+    </MetricInfo>
+    <CadastralZoneInfo>
+      <KOATUU>6324584700</KOATUU>
+      <CadastralZoneNumber>14</CadastralZoneNumber>
+      <CadastralQuarters>
+        <CadastralQuarterInfo>
+          <CadastralQuarterNumber>000</CadastralQuarterNumber>
+          <RegionalContacts>
+            <LocalAuthorityHead>
+              <LastName>Антонов</LastName>
+              <FirstName>М.</FirstName>
+              <MiddleName>Т.</MiddleName>
+            </LocalAuthorityHead>
+            <DKZRHead>
+              <LastName>Логвиненко</LastName>
+              <FirstName>О.</FirstName>
+              <MiddleName>В.</MiddleName>
+            </DKZRHead>
+          </RegionalContacts>
+          <Parcels>
+            <ParcelInfo>
+              <ParcelLocationInfo>
+                <Region>Харківська область</Region>
+                <Settlement>Красненська сільська рада</Settlement>
+                <District>Первомайський  район</District>
+                <ParcelLocation>
+                  <Rural/>
+                </ParcelLocation>
+                <AdditionalInfoBlock>
+                  <AdditionalInfo>село Красне</AdditionalInfo>
+                </AdditionalInfoBlock>
+              </ParcelLocationInfo>
+              <CategoryPurposeInfo>
+                <Category>100</Category>
+                <Purpose>01.01</Purpose>
+                <Use>Для ведення товарного сільськогосподарського виробництва</Use>
+              </CategoryPurposeInfo>
+              <OwnershipInfo>
+                <Code>100</Code>
+              </OwnershipInfo>
+              <ParcelMetricInfo>
+                <ParcelID>0021</ParcelID>
+                <Area>
+                  <MeasurementUnit>га</MeasurementUnit>
+                  <Size>5.4837</Size>
+                  <DeterminationMethod>
+                    <ExhangeFileCoordinates/>
+                  </DeterminationMethod>
+                </Area>
+                <Externals>
+                  <Boundary>
+                    <Lines>
+                      <Line>
+                        <ULID>1</ULID>
+                      </Line>
+                      <Line>
+                        <ULID>2</ULID>
+                      </Line>
+                      <Line>
+                        <ULID>3</ULID>
+                      </Line>
+                      <Line>
+                        <ULID>4</ULID>
+                      </Line>
+                    </Lines>
+                    <Closed>true</Closed>
+                  </Boundary>
+                </Externals>
+              </ParcelMetricInfo>
+              <Proprietors>
+                <ProprietorInfo>
+                  <Authentication>
+                    <NaturalPerson>
+                      <FullName>
+                        <LastName>Калюжна</LastName>
+                        <FirstName>Євгенія</FirstName>
+                        <MiddleName>Афанасіївна</MiddleName>
+                      </FullName>
+                      <TaxNumber>1492515081</TaxNumber>
+                      <Passport>
+                        <DocumentType>Паспорт громадянина України</DocumentType>
+                        <PassportNumber>576826</PassportNumber>
+                        <PassportIssuedDate>1997-09-22</PassportIssuedDate>
+                        <IssuanceAuthority>Первомайським  РВ УМВС України в Харківській області </IssuanceAuthority>
+                        <PassportSeries>МК </PassportSeries>
+                      </Passport>
+                      <Citizenship>804</Citizenship>
+                      <Address>
+                        <Country>804</Country>
+                        <ZIP>64132</ZIP>
+                        <Region>Харківська область</Region>
+                        <District>Первомайський район</District>
+                        <Settlement>селище Червоне Знамено</Settlement>
+                        <Street>вулиця Польова</Street>
+                        <Building>8</Building>
+                      </Address>
+                    </NaturalPerson>
+                  </Authentication>
+                  <ProprietorCode>20</ProprietorCode>
+                  <AdditionalInfoBlock>
+                    <AdditionalInfo>Розпорядження </AdditionalInfo>
+                  </AdditionalInfoBlock>
+                  <PropertyAcquisitionJustification>
+                    <Document>002</Document>
+                    <DocumentDate>2005-06-07</DocumentDate>
+                    <DocumentNumber>240</DocumentNumber>
+                    <ApprovalAuthority>Первомайської районної державної адміністрації Харківської області </ApprovalAuthority>
+                  </PropertyAcquisitionJustification>
+                </ProprietorInfo>
+              </Proprietors>
+              <LegalModeInfo>
+                <LegalModeType>2</LegalModeType>
+                <Duration>
+                  <StartDate>2009-02-03</StartDate>
+                </Duration>
+                <Grantee>
+                  <LegalEntity>
+                    <Name>Приватне підприємство  "Антар-2"</Name>
+                    <EDRPOU>33011014</EDRPOU>
+                    <Address>
+                      <Country>804</Country>
+                      <ZIP>64132</ZIP>
+                      <Region>Харківська область</Region>
+                      <District>Первомайський район</District>
+                      <Settlement>село Червоне Знамено</Settlement>
+                      <Street>вулиця Польова</Street>
+                      <Building>1-А</Building>
+                    </Address>
+                  </LegalEntity>
+                </Grantee>
+                <Grantor>
+                  <NaturalPerson>
+                    <FullName>
+                      <LastName>Калюжна</LastName>
+                      <FirstName>Євгенія</FirstName>
+                      <MiddleName>Афанасіївна</MiddleName>
+                    </FullName>
+                    <TaxNumber>1492515081</TaxNumber>
+                    <Passport>
+                      <DocumentType>Паспорт громадянина України</DocumentType>
+                      <PassportNumber>576826</PassportNumber>
+                      <PassportIssuedDate>1997-09-22</PassportIssuedDate>
+                      <IssuanceAuthority>Первомайським  РВ УМВС України в Харківській області </IssuanceAuthority>
+                      <PassportSeries>МК </PassportSeries>
+                    </Passport>
+                    <Citizenship>804</Citizenship>
+                    <Address>
+                      <Country>804</Country>
+                      <ZIP>64132</ZIP>
+                      <Region>Харківська область</Region>
+                      <District>Первомайський район</District>
+                      <Settlement>селище Червоне Знамено</Settlement>
+                      <Street>вулиця Польова</Street>
+                      <Building>8</Building>
+                    </Address>
+                  </NaturalPerson>
+                </Grantor>
+              </LegalModeInfo>
+              <TechnicalDocumentationInfo>
+                <DocumentationType>006</DocumentationType>
+                <DraftingDate>2005-07-01</DraftingDate>
+                <DocumentList>001</DocumentList>
+                <DocumentList>002</DocumentList>
+                <DocumentList>013</DocumentList>
+                <DocumentList>021</DocumentList>
+                <DocumentList>022</DocumentList>
+                <DocumentList>034</DocumentList>
+                <DocumentList>036</DocumentList>
+                <DocumentList>040</DocumentList>
+                <DocumentList>041</DocumentList>
+                <DocumentList>042</DocumentList>
+                <DocumentList>043</DocumentList>
+                <DocumentList>044</DocumentList>
+              </TechnicalDocumentationInfo>
+              <StateActInfo>
+                <StateActType>4</StateActType>
+                <StateActForm>
+                  <Series>ЯА</Series>
+                  <Number>454254</Number>
+                </StateActForm>
+                <StateActRegistrationInfo>
+                  <RegistrationBookNumber>1</RegistrationBookNumber>
+                  <SectionNumber>1</SectionNumber>
+                  <RegistrationNumber>010668000123</RegistrationNumber>
+                  <RegistrationDate>2006-05-10</RegistrationDate>
+                  <RegistrationPersonInfo>
+                    <SignedByName>
+                      <LastName>Антонов</LastName>
+                      <FirstName>М.</FirstName>
+                      <MiddleName>Т.</MiddleName>
+                    </SignedByName>
+                    <SignedByName>
+                      <LastName>Логвиненко</LastName>
+                      <FirstName>О.</FirstName>
+                      <MiddleName>В.</MiddleName>
+                    </SignedByName>
+                    <SignedByPosition>Голова Первомайської районної державної адміністрації Харківської  області </SignedByPosition>
+                    <SignedByPosition>Начальник Первомайського районного відділу  земельних ресурсів</SignedByPosition>
+                    <RegisteredBy>
+                      <LastName/>
+                      <FirstName/>
+                    </RegisteredBy>
+                    <RegisteredByPosition/>
+                  </RegistrationPersonInfo>
+                </StateActRegistrationInfo>
+                <DeliveryDate>2006-05-10</DeliveryDate>
+                <DeliveryPerson>
+                  <NaturalPerson>
+                    <FullName>
+                      <LastName>Калюжна</LastName>
+                      <FirstName>Євгенія</FirstName>
+                      <MiddleName>Афанасіївна</MiddleName>
+                    </FullName>
+                    <TaxNumber>1492515081</TaxNumber>
+                    <Passport>
+                      <DocumentType>Паспорт громадянина України</DocumentType>
+                      <PassportNumber>576826</PassportNumber>
+                      <PassportIssuedDate>1997-09-22</PassportIssuedDate>
+                      <IssuanceAuthority>Первомайським  РВ УМВС України в Харківській області </IssuanceAuthority>
+                      <PassportSeries>МК </PassportSeries>
+                    </Passport>
+                    <Citizenship>804</Citizenship>
+                    <Address>
+                      <Country>804</Country>
+                      <ZIP>64132</ZIP>
+                      <Region>Харківська область</Region>
+                      <District>Первомайський район</District>
+                      <Settlement>селище Червоне Знамено</Settlement>
+                      <Street>вулиця Польова</Street>
+                      <Building>8</Building>
+                    </Address>
+                  </NaturalPerson>
+                </DeliveryPerson>
+                <EntitlementDocument>
+                  <Document>002</Document>
+                  <DocumentDate>2005-06-07</DocumentDate>
+                  <DocumentNumber>240</DocumentNumber>
+                  <ApprovalAuthority>Первомайська  районна державна  адміністрація Харківської  області </ApprovalAuthority>
+                </EntitlementDocument>
+              </StateActInfo>
+              <Leases>
+                <LeaseInfo>
+                  <LeaseAgreement>
+                    <Leasees>
+                      <Leasee>
+                        <LegalEntity>
+                          <Name>Приватне підприємство  "Антар-2"</Name>
+                          <EDRPOU>33011014</EDRPOU>
+                          <Address>
+                            <Country>804</Country>
+                            <ZIP>64132</ZIP>
+                            <Region>Харківська область</Region>
+                            <District>Первомайський район</District>
+                            <Settlement>село Червоне Знамено</Settlement>
+                            <Street>вулиця Польова</Street>
+                            <Building>1-А</Building>
+                          </Address>
+                        </LegalEntity>
+                      </Leasee>
+                    </Leasees>
+                    <Area>5.4837</Area>
+                    <LeaseTerm>
+                      <LeaseDuration>до 03.02.2033 року</LeaseDuration>
+                    </LeaseTerm>
+                    <Rent>
+                      <MoneyRent/>
+                    </Rent>
+                    <RegistrationNumber>040968000038</RegistrationNumber>
+                    <RegistrationDate>2009-02-03</RegistrationDate>
+                  </LeaseAgreement>
+                  <Externals>
+                    <Boundary>
+                      <Lines>
+                        <Line>
+                          <ULID>1</ULID>
+                        </Line>
+                        <Line>
+                          <ULID>2</ULID>
+                        </Line>
+                        <Line>
+                          <ULID>3</ULID>
+                        </Line>
+                        <Line>
+                          <ULID>4</ULID>
+                        </Line>
+                      </Lines>
+                      <Closed>true</Closed>
+                    </Boundary>
+                  </Externals>
+                </LeaseInfo>
+              </Leases>
+              <Restrictions>
+                <RestrictionInfo>
+                  <RestrictionCode>01.03</RestrictionCode>
+                  <RestrictionName>Охоронна зона навколо (вздовж) об'єкта транспорту</RestrictionName>
+                  <Externals>
+                    <Boundary>
+                      <Lines>
+                        <Line>
+                          <ULID>1</ULID>
+                        </Line>
+                        <Line>
+                          <ULID>2</ULID>
+                        </Line>
+                        <Line>
+                          <ULID>3</ULID>
+                        </Line>
+                        <Line>
+                          <ULID>4</ULID>
+                        </Line>
+                      </Lines>
+                      <Closed>true</Closed>
+                    </Boundary>
+                  </Externals>
+                  <RestrictionEntitlement>
+                    <DocumentType>01</DocumentType>
+                    <DocumentName>Постанова Кабінету Міністрів України №1747 "Про затвердження Правил охорони магістральних трубопроводів"</DocumentName>
+                    <DocumentDate>2002-11-16</DocumentDate>
+                    <NaturalPerson>
+                      <FullName>
+                        <LastName/>
+                        <FirstName/>
+                      </FullName>
+                      <Passport>
+                        <DocumentType/>
+                        <PassportNumber/>
+                        <PassportIssuedDate>    -  -  </PassportIssuedDate>
+                        <IssuanceAuthority/>
+                        <PassportSeries/>
+                      </Passport>
+                      <Address>
+                        <Country/>
+                        <Region/>
+                        <District/>
+                        <Settlement/>
+                        <Street/>
+                        <Building/>
+                      </Address>
+                    </NaturalPerson>
+                    <LegalEntity>
+                      <Name>Верховна рада України</Name>
+                      <EDRPOU>00000000</EDRPOU>
+                      <Address>
+                        <Country>804</Country>
+                        <ZIP>01008</ZIP>
+                        <Region/>
+                        <District/>
+                        <Settlement>місто Київ Печерський район</Settlement>
+                        <Street>вулиця Грушевського</Street>
+                        <Building>5</Building>
+                      </Address>
+                    </LegalEntity>
+                  </RestrictionEntitlement>
+                  <RestrictionTerm>
+                    <Permanent/>
+                  </RestrictionTerm>
+                  <RegistrationDate>    -  -  </RegistrationDate>
+                  <RegistrationNumber/>
+                  <Beneficiaries>
+                    <Beneficiary>
+                      <LegalEntity>
+                        <Name>Первомайська районна державна адміністрація Харківської області </Name>
+                        <EDRPOU>23918373</EDRPOU>
+                        <Address>
+                          <Country>804</Country>
+                          <ZIP>64100</ZIP>
+                          <Region>Харківська область </Region>
+                          <District/>
+                          <Settlement>місто Первомайський</Settlement>
+                          <Street>вулиця Леніна</Street>
+                          <Building>16</Building>
+                        </Address>
+                      </LegalEntity>
+                    </Beneficiary>
+                  </Beneficiaries>
+                  <Payment>
+                    <Free/>
+                  </Payment>
+                </RestrictionInfo>
+              </Restrictions>
+              <LandsParcel>
+                <LandParcelInfo>
+                  <CadastralCode>6324584700:14:000:0021</CadastralCode>
+                  <LandCode>001.01</LandCode>
+                  <MetricInfo>
+                    <Area>
+                      <MeasurementUnit>га</MeasurementUnit>
+                      <Size>5.4837</Size>
+                      <DeterminationMethod>
+                        <ExhangeFileCoordinates/>
+                      </DeterminationMethod>
+                    </Area>
+                    <Perimeter>132.704</Perimeter>
+                    <Externals>
+                      <Boundary>
+                        <Lines>
+                          <Line>
+                            <ULID>1</ULID>
+                          </Line>
+                          <Line>
+                            <ULID>2</ULID>
+                          </Line>
+                          <Line>
+                            <ULID>3</ULID>
+                          </Line>
+                          <Line>
+                            <ULID>4</ULID>
+                          </Line>
+                        </Lines>
+                        <Closed>true</Closed>
+                      </Boundary>
+                    </Externals>
+                  </MetricInfo>
+                </LandParcelInfo>
+              </LandsParcel>
+              <AdjacentUnits>
+                <AdjacentUnitInfo>
+                  <AdjacentBoundary>
+                    <Lines>
+                      <Line>
+                        <ULID>1</ULID>
+                      </Line>
+                    </Lines>
+                    <Closed>false</Closed>
+                  </AdjacentBoundary>
+                  <Proprietor>
+                    <LegalEntity>
+                      <Name>землі гр.Желаєва М. В. (ділянка №191)</Name>
+                      <EDRPOU>00000000</EDRPOU>
+                      <Address>
+                        <Country/>
+                        <Region/>
+                        <District/>
+                        <Settlement/>
+                        <Street/>
+                        <Building/>
+                      </Address>
+                    </LegalEntity>
+                  </Proprietor>
+                  <AdditionalInfoBlock>
+                    <AdditionalInfo>землі гр.Желаєва М. В. (ділянка №191)</AdditionalInfo>
+                  </AdditionalInfoBlock>
+                </AdjacentUnitInfo>
+                <AdjacentUnitInfo>
+                  <AdjacentBoundary>
+                    <Lines>
+                      <Line>
+                        <ULID>2</ULID>
+                      </Line>
+                    </Lines>
+                    <Closed>false</Closed>
+                  </AdjacentBoundary>
+                  <Proprietor>
+                    <LegalEntity>
+                      <Name>землі загального користування </Name>
+                      <EDRPOU>00000000</EDRPOU>
+                      <Address>
+                        <Country/>
+                        <Region/>
+                        <District/>
+                        <Settlement/>
+                        <Street/>
+                        <Building/>
+                      </Address>
+                    </LegalEntity>
+                  </Proprietor>
+                  <AdditionalInfoBlock>
+                    <AdditionalInfo>землі загального користування </AdditionalInfo>
+                  </AdditionalInfoBlock>
+                </AdjacentUnitInfo>
+                <AdjacentUnitInfo>
+                  <AdjacentBoundary>
+                    <Lines>
+                      <Line>
+                        <ULID>3</ULID>
+                      </Line>
+                    </Lines>
+                    <Closed>false</Closed>
+                  </AdjacentBoundary>
+                  <Proprietor>
+                    <LegalEntity>
+                      <Name>землі гр.Калюжний В. П. (ділянка №189)</Name>
+                      <EDRPOU>00000000</EDRPOU>
+                      <Address>
+                        <Country/>
+                        <Region/>
+                        <District/>
+                        <Settlement/>
+                        <Street/>
+                        <Building/>
+                      </Address>
+                    </LegalEntity>
+                  </Proprietor>
+                  <AdditionalInfoBlock>
+                    <AdditionalInfo>землі гр.Калюжний В. П. (ділянка №189)</AdditionalInfo>
+                  </AdditionalInfoBlock>
+                </AdjacentUnitInfo>
+                <AdjacentUnitInfo>
+                  <AdjacentBoundary>
+                    <Lines>
+                      <Line>
+                        <ULID>4</ULID>
+                      </Line>
+                    </Lines>
+                    <Closed>false</Closed>
+                  </AdjacentBoundary>
+                  <Proprietor>
+                    <LegalEntity>
+                      <Name>землі загального користування </Name>
+                      <EDRPOU>00000000</EDRPOU>
+                      <Address>
+                        <Country/>
+                        <Region/>
+                        <District/>
+                        <Settlement/>
+                        <Street/>
+                        <Building/>
+                      </Address>
+                    </LegalEntity>
+                  </Proprietor>
+                  <AdditionalInfoBlock>
+                    <AdditionalInfo>землі загального користування </AdditionalInfo>
+                  </AdditionalInfoBlock>
+                </AdjacentUnitInfo>
+              </AdjacentUnits>
+            </ParcelInfo>
+          </Parcels>
+        </CadastralQuarterInfo>
+      </CadastralQuarters>
+    </CadastralZoneInfo>
+  </InfoPart>
+</UkrainianCadastralExchangeFile>
