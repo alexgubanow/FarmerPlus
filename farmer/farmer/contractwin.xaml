@@ -1,0 +1,170 @@
+﻿<Window x:Class="farmer.contractwindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:farmer"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+    xmlns:res="clr-namespace:farmer.Properties"
+        mc:Ignorable="d"
+        Title="contractwindow" BorderBrush="Black" BorderThickness=".5" Height="412.434" Width="527.858" WindowStartupLocation="CenterOwner" ResizeMode="NoResize" WindowStyle="None" ShowInTaskbar="False" IsTabStop="False">
+    <Grid>
+        <TextBlock x:Name="numcontrtextBlock" HorizontalAlignment="Left" Margin="10,13,0,0" TextWrapping="Wrap" Text="{DynamicResource m_contrnum}" VerticalAlignment="Top" Width="90"/>
+        <TextBox x:Name="numcontrtextBox" HorizontalAlignment="Left" Height="23" Margin="105,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBlock x:Name="typecontrtextBlock" HorizontalAlignment="Left" Margin="241,13,0,0" TextWrapping="Wrap" Text="{DynamicResource m_type_contract}" VerticalAlignment="Top" Width="94"/>
+        <ComboBox SelectedValuePath="Key" DisplayMemberPath="Value" x:Name="typecontrcomboBox" HorizontalAlignment="Left" Margin="340,10,0,0" VerticalAlignment="Top" Width="155"/>
+        <TextBlock x:Name="statustextBlock" HorizontalAlignment="Left" Margin="241,42,0,0" TextWrapping="Wrap" Text="{DynamicResource m_status}" VerticalAlignment="Top" Width="94"/>
+        <ComboBox x:Name="statuscomboBox" SelectedValuePath="Key" DisplayMemberPath="Value" HorizontalAlignment="Left" Margin="340,37,0,0" VerticalAlignment="Top" Width="155" SelectionChanged="statuscomboBox_SelectionChanged"/>
+
+
+        <TabControl x:Name="tabControl" HorizontalAlignment="Left" Height="261" Margin="0,93,0,0" VerticalAlignment="Top" Width="513">
+            <TabItem Header="{DynamicResource m_infocontr}">
+                <Grid >
+                    <TextBlock x:Name="cadnumtextBlock" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="{DynamicResource m_cadnum}" VerticalAlignment="Top" Width="146"/>
+                    <TextBox x:Name="cadnumtextBox" MaxLength="22" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="23" Margin="10,31,0,0" VerticalAlignment="Top" Width="146" TextChanged="cadnumtextBox_TextChanged"/>
+                    <TextBlock x:Name="sqtextBlock" HorizontalAlignment="Left" Margin="10,59,0,0" TextWrapping="Wrap" Text="{DynamicResource m_square}" VerticalAlignment="Top" Width="146"/>
+                    <TextBox x:Name="sqtextBox"  VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="23" Margin="10,80,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="146"/>
+                    <TextBlock x:Name="termleasetextBlock" HorizontalAlignment="Left" Margin="10,108,0,0" TextWrapping="Wrap" Text="{DynamicResource m_term_lease}" VerticalAlignment="Top" Width="146"/>
+                    <DatePicker x:Name="termleasedatePicker" HorizontalAlignment="Left" Margin="10,129,0,0" VerticalAlignment="Top" Width="146"/>
+                    <TextBlock x:Name="koatuutextBlock" HorizontalAlignment="Left" Margin="286,10,0,0" TextWrapping="Wrap" Text="КОАТУУ" VerticalAlignment="Top"/>
+                    <TextBox x:Name="koatuutextBox" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="23" Margin="286,29,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="146"/>
+                    <TextBlock x:Name="formownertextBlock" HorizontalAlignment="Left" Margin="161,10,0,0" TextWrapping="Wrap" Text="{DynamicResource m_form_owner}" VerticalAlignment="Top" Width="120"/>
+                    <ComboBox x:Name="formownercomboBox" SelectedValuePath="Key" DisplayMemberPath="Value" HorizontalAlignment="Left" Margin="161,31,0,0" VerticalAlignment="Top" Width="120"/>
+
+
+                    <TextBlock x:Name="formusetextBlock" HorizontalAlignment="Left" Margin="161,59,0,0" TextWrapping="Wrap" Text="{DynamicResource m_form_use}" VerticalAlignment="Top" Width="120"/>
+                    <ComboBox x:Name="formusecomboBox" SelectedValuePath="Key" DisplayMemberPath="Value" HorizontalAlignment="Left" Margin="161,80,0,0" VerticalAlignment="Top" Width="120"/>
+
+
+                    <TextBlock x:Name="formunittextBlock" HorizontalAlignment="Left" Margin="161,107,0,0" TextWrapping="Wrap" Text="{DynamicResource m_form_unit}" VerticalAlignment="Top" Width="120"/>
+                    <ComboBox x:Name="formunitcomboBox" SelectedValuePath="Key" DisplayMemberPath="Value" HorizontalAlignment="Left" Margin="161,128,0,0" VerticalAlignment="Top" Width="120"/>
+
+
+                    <TextBlock x:Name="numareatextBlock" HorizontalAlignment="Left" Margin="286,59,0,0" TextWrapping="Wrap" Text="{DynamicResource m_area_number}" VerticalAlignment="Top" Width="94"/>
+                    <TextBox x:Name="numareatextBox" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="23" Margin="286,78,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="146"/>
+                    <TextBlock x:Name="numunittextBlock" HorizontalAlignment="Left" Margin="286,108,0,0" TextWrapping="Wrap" Text="{DynamicResource m_unit_number}" VerticalAlignment="Top"/>
+                    <TextBox x:Name="numunittextBox" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="23" Margin="286,126,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="146"/>
+                    <TextBlock x:Name="notestextBlock" HorizontalAlignment="Left" Margin="10,158,0,0" TextWrapping="Wrap" Text="{DynamicResource m_notes}" VerticalAlignment="Top" Width="72"/>
+                    <TextBox x:Name="notestextBox" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="44" Margin="10,179,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="422"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="{DynamicResource m_lessor}" HorizontalAlignment="Left">
+                <Grid>
+                    <TextBlock x:Name="lessortextBlock" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="{DynamicResource m_lessor}" VerticalAlignment="Top" Width="98"/>
+                    <TextBox x:Name="lessortextBox" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="46" Margin="10,31,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="240"/>
+                    <TextBlock x:Name="numbertextBlock" HorizontalAlignment="Left" Margin="255,82,0,0" TextWrapping="Wrap" Text="{DynamicResource m_contactinfo}" VerticalAlignment="Top" Width="240"/>
+                    <TextBox x:Name="numbertextBox" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="23" Margin="255,103,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="240"/>
+                    <TextBlock x:Name="adresstextBlock" HorizontalAlignment="Left" Margin="255,10,0,0" TextWrapping="Wrap" Text="{DynamicResource m_address}" VerticalAlignment="Top" Width="98"/>
+                    <TextBox x:Name="adresstextBox" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="46" Margin="255,31,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="240"/>
+                    <Grid x:Name="fizgrid"  Visibility="Hidden" Margin="0,131,0,0">
+                        <TextBlock x:Name="kemvidantextBlock" HorizontalAlignment="Left" Margin="10,28,0,0" TextWrapping="Wrap" Text="{DynamicResource m_kemvidan}" VerticalAlignment="Top" Width="99"/>
+                        <TextBox x:Name="kemvidantextBox" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="46" Margin="11,49,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="239"/>
+                        <TextBlock x:Name="passporttextBlock" HorizontalAlignment="Left" Margin="10,3,0,0" TextWrapping="Wrap" Text="{DynamicResource m_passport}" VerticalAlignment="Top" Width="99"/>
+                        <TextBox x:Name="passporttextBox" MaxLength="8" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="23" Margin="104,0,0,0" VerticalAlignment="Top" Width="146" TextChanged="passporttextBox_TextChanged"/>
+                        <DatePicker x:Name="vidandatePicker" SelectedDate="01.01.2000" HorizontalAlignment="Left" Margin="351,0,0,0" VerticalAlignment="Top" Width="146"/>
+                        <TextBlock x:Name="vidantextBlock" HorizontalAlignment="Left" Margin="257,4,0,0" TextWrapping="Wrap" Text="{DynamicResource m_vidan}" VerticalAlignment="Top" Width="73"/>
+                        <TextBlock x:Name="inntextBlock" HorizontalAlignment="Left" Margin="255,48,0,0" TextWrapping="Wrap" Text="{DynamicResource m_inn}" VerticalAlignment="Top" Width="73"/>
+                        <TextBox x:Name="inntextBox" HorizontalAlignment="Left" Height="23" Margin="351,44,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="146"/>
+                    </Grid>
+                    <Grid x:Name="yurgrid" Visibility="Visible" Margin="0,131,0,0">
+                        <TextBlock x:Name="kodpredtextBlock" HorizontalAlignment="Left" Margin="11,2,0,0" TextWrapping="Wrap" Text="{DynamicResource m_codpred}" VerticalAlignment="Top" Width="115"/>
+                        <TextBox x:Name="kodpredtextBox" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="23" Margin="131,0,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="119"/>
+                        <TextBlock x:Name="schettextBlock" HorizontalAlignment="Left" Margin="11,30,0,0" TextWrapping="Wrap" Text="{DynamicResource m_schet}" VerticalAlignment="Top" Width="115"/>
+                        <TextBox x:Name="schettextBox" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="23" Margin="131,28,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="119"/>
+                        <TextBlock x:Name="banktextBlock" HorizontalAlignment="Left" Margin="11,58,0,0" TextWrapping="Wrap" Text="Банк" VerticalAlignment="Top"/>
+                        <TextBox x:Name="banktextBox" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="23" Margin="131,56,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="119"/>
+                        <TextBlock x:Name="mfotextBlock" HorizontalAlignment="Left" Margin="258,5,0,0" TextWrapping="Wrap" Text="МФО" VerticalAlignment="Top"/>
+                        <TextBox x:Name="mfotextBox" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="23" Margin="342,1,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="153"/>
+                        <TextBlock x:Name="svidottextBlock" HorizontalAlignment="Left" Margin="258,33,0,0" TextWrapping="Wrap" Text="{DynamicResource m_svidot}" VerticalAlignment="Top"/>
+                        <TextBox x:Name="svidottextBox" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="23" Margin="342,29,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="153"/>
+
+                    </Grid>
+                    <ComboBox x:Name="fizoryurcomboBox" HorizontalAlignment="Left" Margin="10,104,0,0" VerticalAlignment="Top" Width="240" SelectionChanged="fizoryurcomboBox_SelectionChanged">
+                        <ComboBoxItem Content="{DynamicResource m_fiz}"/>
+                        <ComboBoxItem Content="{DynamicResource m_yur}"/>
+                    </ComboBox>
+                    <TextBlock x:Name="textBlock_Copy6" HorizontalAlignment="Left" Margin="10,82,0,0" TextWrapping="Wrap" Text="{DynamicResource m_kindact}" VerticalAlignment="Top" Width="240"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="{DynamicResource m_leaser}">
+                <Grid >
+                    <TextBlock x:Name="leasertextBlock" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="{DynamicResource m_leaser}" VerticalAlignment="Top" Width="240"/>
+                    <TextBox x:Name="leasertextBox" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="46" Margin="10,31,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="240"/>
+                    <TextBlock x:Name="leasernumbertextBlock" HorizontalAlignment="Left" Margin="255,82,0,0" TextWrapping="Wrap" Text="{DynamicResource m_contactinfo}" VerticalAlignment="Top" Width="240"/>
+                    <TextBox x:Name="leasernumbertextBox" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="23" Margin="255,103,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="240"/>
+                    <TextBlock x:Name="leaseradresstextBlock" HorizontalAlignment="Left" Margin="255,10,0,0" TextWrapping="Wrap" Text="{DynamicResource m_address}" VerticalAlignment="Top" Width="98"/>
+                    <TextBox x:Name="leaseradresstextBox" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="46" Margin="255,31,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="240"/>
+                    <Grid x:Name="leaserfizgrid"  Visibility="Hidden" Margin="0,131,0,0">
+                        <TextBlock x:Name="leaserkemvidantextBlock" HorizontalAlignment="Left" Margin="10,25,0,0" TextWrapping="Wrap" Text="{DynamicResource m_kemvidan}" VerticalAlignment="Top" Width="99"/>
+                        <TextBox x:Name="leaserkemvidantextBox" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="46" Margin="10,46,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="240"/>
+                        <TextBlock x:Name="leaserpassporttextBlock" HorizontalAlignment="Left" Margin="10,3,0,0" TextWrapping="Wrap" Text="{DynamicResource m_passport}" VerticalAlignment="Top" Width="94"/>
+                        <TextBox x:Name="leaserpassporttextBox" MaxLength="8" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="23" Margin="109,0,0,0" VerticalAlignment="Top" Width="141" TextChanged="leaserpassporttextBox_TextChanged"/>
+                        <DatePicker x:Name="leaservidandatePicker" SelectedDate="01.01.2000" HorizontalAlignment="Left" Margin="351,0,0,0" VerticalAlignment="Top" Width="146"/>
+                        <TextBlock x:Name="leaservidantextBlock" HorizontalAlignment="Left" Margin="256,3,0,0" TextWrapping="Wrap" Text="{DynamicResource m_vidan}" VerticalAlignment="Top" Width="71"/>
+                        <TextBlock x:Name="leaserinntextBlock" HorizontalAlignment="Left" Margin="260,49,0,0" TextWrapping="Wrap" Text="{DynamicResource m_inn}" VerticalAlignment="Top" Width="86"/>
+                        <TextBox x:Name="leaserinntextBox" HorizontalAlignment="Left" Height="23" Margin="351,46,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="146"/>
+                    </Grid>
+                    <Grid x:Name="leaseryurgrid" Visibility="Visible" Margin="0,131,0,0">
+                        <TextBlock x:Name="leaserkodpredtextBlock" HorizontalAlignment="Left" Margin="10,3,0,0" TextWrapping="Wrap" Text="{DynamicResource m_codpred}" VerticalAlignment="Top" Width="116"/>
+                        <TextBox x:Name="leaserkodpredtextBox" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="23" Margin="131,0,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="119"/>
+                        <TextBlock x:Name="leaserschettextBlock" HorizontalAlignment="Left" Margin="10,32,0,0" TextWrapping="Wrap" Text="{DynamicResource m_schet}" VerticalAlignment="Top" Width="116"/>
+                        <TextBox x:Name="leaserschettextBox" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="23" Margin="131,28,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="119"/>
+                        <TextBlock x:Name="leaserbanktextBlock" HorizontalAlignment="Left" Margin="10,60,0,0" TextWrapping="Wrap" Text="Банк" VerticalAlignment="Top"/>
+                        <TextBox x:Name="leaserbanktextBox" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="23" Margin="131,56,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="119"/>
+                        <TextBlock x:Name="leasermfotextBlock" HorizontalAlignment="Left" Margin="258,4,0,0" TextWrapping="Wrap" Text="МФО" VerticalAlignment="Top"/>
+                        <TextBox x:Name="leasermfotextBox" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="23" Margin="342,0,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="153"/>
+                        <TextBlock x:Name="leasersvidottextBlock" HorizontalAlignment="Left" Margin="258,32,0,0" TextWrapping="Wrap" Text="{DynamicResource m_svidot}" VerticalAlignment="Top" Width="79"/>
+                        <TextBox x:Name="leasersvidottextBox" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="23" Margin="342,28,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="153"/>
+
+                    </Grid>
+                    <ComboBox x:Name="leaserfizoryurcomboBox" HorizontalAlignment="Left" Margin="10,104,0,0" VerticalAlignment="Top" Width="240" SelectionChanged="leaserfizoryurcomboBox_SelectionChanged">
+                        <ComboBoxItem Content="{DynamicResource m_fiz}"/>
+                        <ComboBoxItem Content="{DynamicResource m_yur}"/>
+                    </ComboBox>
+                    <TextBlock x:Name="leasertextBlock_Copy6" HorizontalAlignment="Left" Margin="10,82,0,0" TextWrapping="Wrap" Text="{DynamicResource m_kindact}" VerticalAlignment="Top" Width="240"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="{DynamicResource m_coords}">
+                <StackPanel Orientation="Horizontal">
+                    <ListView Name="ck63listView"
+                      VirtualizingStackPanel.IsVirtualizing="True"
+                      VirtualizingStackPanel.VirtualizationMode="Recycling"
+                      ScrollViewer.CanContentScroll="True">
+                        <ListView.View>
+                            <GridView>
+                                <GridView.Columns>
+                                    <GridViewColumn Width="auto" Header="X" DisplayMemberBinding="{Binding x}"/>
+                                    <GridViewColumn Width="auto" Header="Y" DisplayMemberBinding="{Binding y}"/>
+                                    <GridViewColumn Width="auto" Header="rank" DisplayMemberBinding="{Binding rank}"/>
+                                </GridView.Columns>
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+                    <ListView Name="wgs84listView"
+                      VirtualizingStackPanel.IsVirtualizing="True"
+                      VirtualizingStackPanel.VirtualizationMode="Recycling"
+                      ScrollViewer.CanContentScroll="True">
+                        <ListView.View>
+                            <GridView>
+                                <GridView.Columns>
+                                    <GridViewColumn Width="auto" Header="X" DisplayMemberBinding="{Binding x}"/>
+                                    <GridViewColumn Width="auto" Header="Y" DisplayMemberBinding="{Binding y}"/>
+                                    <GridViewColumn Width="auto" Header="rank" DisplayMemberBinding="{Binding rank}"/>
+                                </GridView.Columns>
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+                </StackPanel>
+            </TabItem>
+        </TabControl>
+        <Button x:Name="buttonOK" Content="Ok" HorizontalAlignment="Left" Margin="340,370,0,0" VerticalAlignment="Top" Width="75" Click="buttonOK_Click"/>
+        <Button x:Name="buttonCancel" Content="{DynamicResource m_cancel}" HorizontalAlignment="Left" Margin="420,370,0,0" VerticalAlignment="Top" Width="75" Click="buttonCancel_Click"/>
+        <Button x:Name="buttonImportXML" Content="{DynamicResource m_importxml}" HorizontalAlignment="Left" Margin="10,370,0,0" VerticalAlignment="Top" Width="108" Click="buttonImportXML_Click"/>
+        <DatePicker SelectedDate="{x:Static sys:DateTime.Now}" x:Name="contrdatePicker" HorizontalAlignment="Left" Margin="105,38,0,0" VerticalAlignment="Top" Width="120"/>
+        <TextBlock x:Name="textBlock_Copy2" HorizontalAlignment="Left" Margin="10,42,0,0" TextWrapping="Wrap" Text="{DynamicResource m_date_contract}" VerticalAlignment="Top" Width="90"/>
+        <DatePicker Visibility="Visible" x:Name="regdatePicker" HorizontalAlignment="Left" Margin="340,64,0,0" VerticalAlignment="Top" Width="155"/>
+        <TextBlock Visibility="Visible" x:Name="regtextBlock" HorizontalAlignment="Left" Margin="241,68,0,0" TextWrapping="Wrap" Text="{DynamicResource m_registration_date}" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>

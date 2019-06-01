@@ -1,0 +1,646 @@
+﻿<Fluent:RibbonWindow xmlns:awe="http://schemas.awesomium.com/winfx" 
+    x:Name="webWindow"
+    x:Class="farmer.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:Fluent="clr-namespace:Fluent;assembly=Fluent"
+    xmlns:core="clr-namespace:Awesomium.Core;assembly=Awesomium.Core"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local="clr-namespace:farmer"
+    xmlns:md="clr-namespace:MigraDoc.Rendering.Windows;assembly=MigraDoc.Rendering-WPF"
+    xmlns:res="clr-namespace:farmer.Properties"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+    xmlns:mahh="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+    mc:Ignorable="d"
+    FlowDirection="LeftToRight"
+    Title="Farmer+"
+    Height="768"
+    Width="1024"
+    Loaded="RibbonWindow_Loaded"
+    Closing="RibbonWindow_Closing"
+    WindowState="Maximized"
+    WindowStartupLocation="CenterScreen" Icon="icon.ico" >
+    <awe:WebDialogsLayer>
+    <Grid>
+        <mahh:ProgressRing Panel.ZIndex="1001" x:Name="overlayprogressring" Visibility="Collapsed" Foreground="White"/>
+        <Rectangle Panel.ZIndex="1000" x:Name="overlayrect" Fill="DarkGray" Opacity=".5" Visibility="Collapsed"/>
+        <Fluent:Ribbon SelectedTabIndex="2" AutomaticStateManagement="True" x:Name="ribbon" SelectedTabChanged="Ribbon_SelectedTabChanged" CanMinimize="False" CanQuickAccessLocationChanging="False" CanCustomizeQuickAccessToolBarItems="False">
+            <Fluent:Ribbon.Menu>
+                <Fluent:Backstage x:Name="backMenu" Header="{DynamicResource m_menu}">
+                    <Fluent:BackstageTabControl>
+                        <Fluent:BackstageTabItem Header="{DynamicResource m_settings}">
+                                <StackPanel >
+                                    <GroupBox Header="{DynamicResource m_autorize}">
+                                        <StackPanel Orientation="Horizontal">
+                                            <Fluent:CheckBox x:Name="enablepasscheckBox" Header="{DynamicResource m_enautorize}" Checked="enablepasscheckBox_Checked" Unchecked="enablepasscheckBox_Checked"/>
+                                            <StackPanel Width="10"/>
+                                            <Button Content="{DynamicResource m_changepass}" Click="Button_Click_3"/>
+                                        </StackPanel>
+                                    </GroupBox>
+                                    <GroupBox Header="{DynamicResource m_editdb}">
+                                        <StackPanel Orientation="Horizontal">
+                                            <Fluent:CheckBox x:Name="enableeditcheckBox" Header="{DynamicResource m_enableeditdb}" Checked="enableeditcheckBox_Unchecked" Unchecked="enableeditcheckBox_Unchecked"/>
+                                        </StackPanel>
+                                    </GroupBox>
+                                    <GroupBox Header="{DynamicResource m_connservdb}">
+                                    <StackPanel>
+                                        <StackPanel Height="3"/>
+                                        <StackPanel Orientation="Horizontal">
+                                            <StackPanel Width="3"/>
+                                            <StackPanel >
+                                                <StackPanel Height="3"/>
+                                                <TextBlock Text="{DynamicResource m_servip}" />
+                                                <StackPanel Height="8"/>
+                                                <TextBlock Text="{DynamicResource m_user}" />
+                                                <StackPanel Height="8"/>
+                                                <TextBlock Text="{DynamicResource m_pass}" />
+                                            </StackPanel>
+                                            <StackPanel >
+                                                <Fluent:TextBox x:Name="serveriptextBox" HorizontalAlignment="Left" Width="145" Text=""/>
+                                                <StackPanel Height="3"/>
+                                                <Fluent:TextBox x:Name="usertextBox" HorizontalAlignment="Left" Width="145" Text="" />
+                                                <StackPanel Height="3"/>
+                                                <Fluent:TextBox x:Name="passtextBox" HorizontalAlignment="Left" Width="145" Text=""/>
+                                            </StackPanel>
+                                            <StackPanel Width="8"/>
+                                            <StackPanel >
+                                                <StackPanel Orientation="Horizontal">
+                                                    <StackPanel >
+                                                        <StackPanel Height="3"/>
+                                                        <TextBlock Text="{DynamicResource m_servport}" />
+                                                        <StackPanel Height="8"/>
+                                                        <TextBlock Text="{DynamicResource m_db}" />
+                                                    </StackPanel>
+                                                    <StackPanel >
+                                                        <Fluent:TextBox x:Name="serverporttextBox" HorizontalAlignment="Left" Width="145" Text="" />
+                                                        <StackPanel Height="3"/>
+                                                        <Fluent:TextBox x:Name="dbtextBox" HorizontalAlignment="Left" Width="145" Text="" />
+                                                    </StackPanel>
+                                                </StackPanel>
+                                                <StackPanel Height="4"/>
+                                                <Button x:Name="testbutton" Content="{DynamicResource m_testsave}" Click="testbutton_Click"/>
+                                            </StackPanel>
+                                        </StackPanel>
+                                    </StackPanel>
+                                </GroupBox>
+                                <GroupBox Header="{DynamicResource m_db}">
+                                    <StackPanel>
+                                        <StackPanel Height="3"/>
+                                        <StackPanel Orientation="Horizontal">
+                                            <StackPanel Width="3"/>
+                                            <StackPanel >
+                                                <Button x:Name="cleardbbutton" Content="{DynamicResource m_delallcontrs}" Click="cleardbbutton_Click"/>
+                                                <StackPanel Height="5"/>
+                                                <Button x:Name="backupdbbutton" Content="{DynamicResource m_backupdb}" Click="backupdbbutton_Click"/>
+                                                <StackPanel Height="4"/>
+                                                <Button x:Name="restoredbbutton" Content="{DynamicResource m_restorebackupdb}" Click="restoredbbutton_Click"/>
+                                            </StackPanel>
+                                        </StackPanel>
+                                    </StackPanel>
+                                </GroupBox>
+                                <GroupBox Header="{DynamicResource m_language}">
+                                    <StackPanel>
+                                        <StackPanel Height="3"/>
+                                        <StackPanel Orientation="Horizontal">
+                                            <StackPanel Width="3"/>
+                                            <ComboBox x:Name="langcomboBox" SelectedValuePath="Key" DisplayMemberPath="Value" Height="26" Width="150" SelectionChanged="langcomboBox_SelectionChanged"/>
+                                        </StackPanel>
+                                    </StackPanel>
+                                </GroupBox>
+                            </StackPanel>
+                        </Fluent:BackstageTabItem>
+                        <!--<Fluent:BackstageTabItem Header="О программе"/>-->
+                        <Fluent:Button Header="{DynamicResource m_closeprog}" Click="Button_Click" />
+                    </Fluent:BackstageTabControl>
+                </Fluent:Backstage>
+            </Fluent:Ribbon.Menu>
+            <Fluent:Ribbon.ContextualGroups>
+                <Fluent:RibbonContextualTabGroup Visibility="Visible" x:Name="filGroup" Header="{DynamicResource m_fil}" Background="Purple" BorderBrush="Purple" />
+                <Fluent:RibbonContextualTabGroup Visibility="Visible" x:Name="repGroup" Header="{DynamicResource m_print}" Background="Green" BorderBrush="Green" />
+            </Fluent:Ribbon.ContextualGroups>
+            <Fluent:RibbonTabItem x:Name="tabcontr" Header="{DynamicResource m_contracts}">
+                <Fluent:RibbonGroupBox Header="{DynamicResource m_report}">
+                    <Fluent:Button LargeIcon="\Images\PasteLarge.png" Header="{DynamicResource m_genrep}" Click="filteredMenuItem_Click" />
+                </Fluent:RibbonGroupBox>
+                <Fluent:RibbonGroupBox Header="{DynamicResource m_import}">
+                    <Fluent:Button Header="{DynamicResource m_manualinput}" Click="addcontbutton_Click" LargeIcon="\Images\add.png"/>
+                    <Fluent:Button Header="XML" Click="addcontXMLbutton_Click" LargeIcon="\Images\xmlLarge.png" Width="57"/>
+                </Fluent:RibbonGroupBox>
+                <Fluent:RibbonGroupBox x:Name="tabcontrfilgroup" Header="{DynamicResource m_fil}">
+                    <StackPanel Orientation="Horizontal">
+                        <StackPanel Orientation="Horizontal">
+                            <StackPanel >
+                                <Fluent:CheckBox x:Name="leasercheckBox" Header="{DynamicResource m_leaser}" Checked="leasercheckBox_Checked"  Unchecked="leasercheckBox_Checked"/>
+                                <StackPanel Height="2.5"/>
+                                <Fluent:CheckBox x:Name="statuscheckBox" Header="{DynamicResource m_status}" Checked="statuscheckBox_Checked" Unchecked="statuscheckBox_Checked"/>
+                                <StackPanel Height="2.5"/>
+                                <Fluent:CheckBox x:Name="cadnumcheckBox" Header="{DynamicResource m_cadnum}" Checked="cadnumcheckBox_Checked" Unchecked="cadnumcheckBox_Checked"/>
+                            </StackPanel>
+                            <StackPanel >
+                                <Fluent:ComboBox x:Name="leasercomboBox" IsEnabled="False" SelectionChanged="leasercomboBox_SelectionChanged"  VerticalContentAlignment="Center" HorizontalAlignment="Left" Width="145" />
+                                <Fluent:ComboBox x:Name="statuscomboBox" IsEnabled="False" SelectedValuePath="Key" SelectionChanged="statuscomboBox_SelectionChanged" DisplayMemberPath="Value" VerticalContentAlignment="Center" HorizontalAlignment="Left" Width="145" />
+                                <Fluent:TextBox x:Name="cadnumtextBox" IsEnabled="False" VerticalContentAlignment="Center" TextChanged="cadnumtextBox_TextChanged" HorizontalAlignment="Left" Width="145" Text="" MaxLength="22"/>
+                            </StackPanel>
+                        </StackPanel>
+                        <StackPanel Width="5"/>
+                        <StackPanel Orientation="Horizontal">
+                            <StackPanel >
+                                <Fluent:CheckBox x:Name="formownercheckBox" Header="{DynamicResource m_form_owner}" Checked="formownercheckBox_Checked" Unchecked="formownercheckBox_Checked"/>
+                                <StackPanel Height="2.5"/>
+                                <Fluent:CheckBox x:Name="formunitcheckBox" Header="{DynamicResource m_form_unit}" Checked="formunitcheckBox_Checked" Unchecked="formunitcheckBox_Checked"/>
+                                <StackPanel Height="2.5"/>
+                                <Fluent:CheckBox x:Name="formusecheckBox" Header="{DynamicResource m_form_use}" Checked="formusecheckBox_Checked" Unchecked="formusecheckBox_Checked"/>
+                            </StackPanel>
+                            <StackPanel >
+                                <Fluent:ComboBox x:Name="formownercomboBox" IsEnabled="False" SelectedValuePath="Key" SelectionChanged="formownercomboBox_SelectionChanged"  DisplayMemberPath="Value" VerticalContentAlignment="Center" HorizontalAlignment="Left" Width="145" />
+                                <Fluent:ComboBox x:Name="formunitcomboBox" IsEnabled="False" SelectedValuePath="Key" SelectionChanged="formunitcomboBox_SelectionChanged"  DisplayMemberPath="Value" VerticalContentAlignment="Center" HorizontalAlignment="Left" Width="145" />
+                                <Fluent:ComboBox x:Name="formusecomboBox" IsEnabled="False" SelectedValuePath="Key" SelectionChanged="formusecomboBox_SelectionChanged"  DisplayMemberPath="Value" VerticalContentAlignment="Center" HorizontalAlignment="Left" Width="145" />
+                            </StackPanel>
+                        </StackPanel>
+                    </StackPanel>
+                    <Fluent:ToggleButton x:Name="contrmoreparam" Header="{DynamicResource m_moreopt}" Click="Button_Click_1"  LargeIcon="\Images\search.png"/>
+                </Fluent:RibbonGroupBox>
+            </Fluent:RibbonTabItem>
+            <Fluent:RibbonTabItem x:Name="tabrotation" Header="Севооборот" Visibility="Collapsed">
+            </Fluent:RibbonTabItem>
+            <Fluent:RibbonTabItem x:Name="tabmap" Header="{DynamicResource m_map}">
+                <Fluent:RibbonGroupBox Header="{DynamicResource m_fil}">
+                    <StackPanel Orientation="Horizontal">
+                        <StackPanel Orientation="Horizontal">
+                            <StackPanel >
+                                <Fluent:CheckBox x:Name="mapleasercheckBox" Header="{DynamicResource m_leaser}" Checked="mapleasercheckBox_Checked"  Unchecked="mapleasercheckBox_Checked"/>
+                                <StackPanel Height="2.5"/>
+                                <Fluent:CheckBox x:Name="mapstatuscheckBox" Header="{DynamicResource m_status}" Checked="mapstatuscheckBox_Checked" Unchecked="mapstatuscheckBox_Checked"/>
+                                <StackPanel Height="2.5"/>
+                                <Fluent:CheckBox x:Name="mapcadnumcheckBox" Header="{DynamicResource m_cadnum}" Checked="mapcadnumcheckBox_Checked" Unchecked="mapcadnumcheckBox_Checked"/>
+                            </StackPanel>
+                            <StackPanel >
+                                <Fluent:ComboBox x:Name="mapleasercomboBox" IsEnabled="False" SelectionChanged="mapleasercomboBox_SelectionChanged"  VerticalContentAlignment="Center" HorizontalAlignment="Left" Width="145" />
+                                <Fluent:ComboBox x:Name="mapstatuscomboBox" IsEnabled="False" SelectedValuePath="Key" SelectionChanged="mapstatuscomboBox_SelectionChanged" DisplayMemberPath="Value" VerticalContentAlignment="Center" HorizontalAlignment="Left" Width="145" />
+                                <Fluent:TextBox x:Name="mapcadnumtextBox" IsEnabled="False" VerticalContentAlignment="Center" TextChanged="mapcadnumtextBox_TextChanged" HorizontalAlignment="Left" Width="145" Text="" MaxLength="22"/>
+                            </StackPanel>
+                        </StackPanel>
+                        <StackPanel Width="5" >
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <StackPanel >
+                                <Fluent:CheckBox x:Name="mapformownercheckBox" Header="{DynamicResource m_form_owner}" Checked="mapformownercheckBox_Checked" Unchecked="mapformownercheckBox_Checked"/>
+                                <StackPanel Height="2.5"/>
+                                <Fluent:CheckBox x:Name="mapformunitcheckBox" Header="{DynamicResource m_form_unit}" Checked="mapformunitcheckBox_Checked" Unchecked="mapformunitcheckBox_Checked"/>
+                                <StackPanel Height="2.5"/>
+                                <Fluent:CheckBox x:Name="mapformusecheckBox" Header="{DynamicResource m_form_use}" Checked="mapformusecheckBox_Checked" Unchecked="mapformusecheckBox_Checked"/>
+                            </StackPanel>
+                            <StackPanel >
+                                <Fluent:ComboBox x:Name="mapformownercomboBox" IsEnabled="False" SelectedValuePath="Key" SelectionChanged="mapformownercomboBox_SelectionChanged"  DisplayMemberPath="Value" VerticalContentAlignment="Center" HorizontalAlignment="Left" Width="145" />
+                                <Fluent:ComboBox x:Name="mapformunitcomboBox" IsEnabled="False" SelectedValuePath="Key" SelectionChanged="mapformunitcomboBox_SelectionChanged"  DisplayMemberPath="Value" VerticalContentAlignment="Center" HorizontalAlignment="Left" Width="145" />
+                                <Fluent:ComboBox x:Name="mapformusecomboBox" IsEnabled="False" SelectedValuePath="Key" SelectionChanged="mapformusecomboBox_SelectionChanged"  DisplayMemberPath="Value" VerticalContentAlignment="Center" HorizontalAlignment="Left" Width="145" />
+                            </StackPanel>
+                        </StackPanel>
+                        <StackPanel Width="5" >
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <StackPanel >
+                                <Fluent:CheckBox x:Name="maptypecheckBox" Header="{DynamicResource m_type_contract}" Checked="maptypecheckBox_Checked" Unchecked="maptypecheckBox_Checked"/>
+                                <StackPanel Height="2.5"/>
+                                <Fluent:CheckBox x:Name="mapareacheckBox" Header="{DynamicResource m_area_number}" Checked="mapareacheckBox_Checked" Unchecked="mapareacheckBox_Checked"/>
+                                <StackPanel Height="2.5"/>
+                                <Fluent:CheckBox x:Name="mapunitcheckBox" Header="{DynamicResource m_unit_number}" Checked="mapunitcheckBox_Checked"  Unchecked="mapunitcheckBox_Checked"/>
+                            </StackPanel>
+                            <StackPanel >
+                                <Fluent:ComboBox x:Name="maptypecomboBox" IsEnabled="False" SelectedValuePath="Key" SelectionChanged="maptypecomboBox_SelectionChanged" DisplayMemberPath="Value" VerticalContentAlignment="Center" HorizontalAlignment="Left" Width="145" />
+                                <Fluent:TextBox x:Name="mapareatextBox" Text="" IsEnabled="False" TextChanged="mapareatextBox_TextChanged" Width="145"/>
+                                <Fluent:TextBox x:Name="mapunittextBox" Text="" IsEnabled="False" TextChanged="mapunittextBox_TextChanged" Width="145"/>
+                            </StackPanel>
+                        </StackPanel>
+                        </StackPanel>
+                        <Fluent:ToggleButton x:Name="mapmoreparam" Header="{DynamicResource m_moreopt}" Click="Button_Click_1"  LargeIcon="\Images\search.png"/>
+                    </Fluent:RibbonGroupBox>                    
+                    <Fluent:RibbonGroupBox>
+                        <Fluent:Button x:Name="addkmlbutton" Header="KML"  Click="addkmlbutton_Click" LargeIcon="\Images\add.png"/>
+                    </Fluent:RibbonGroupBox>
+                </Fluent:RibbonTabItem>
+            <Fluent:RibbonTabItem x:Name="contrtabfil" Header="{DynamicResource m_contrparam}" Visibility="Visible" Group="{Binding ElementName=filGroup}">
+
+                <Fluent:RibbonGroupBox Header="{DynamicResource m_extraopt}">
+
+                    <StackPanel Orientation="Horizontal">
+                        <StackPanel >
+                            <TextBlock HorizontalAlignment="Left" Text="{DynamicResource m_date_contract}" />
+                            <StackPanel Orientation="Horizontal">
+                                <StackPanel >
+                                    <StackPanel Height="2.5"/>
+                                    <Fluent:CheckBox x:Name="datacontscheckBox" Header="{DynamicResource m_s}" Checked="datacontscheckBox_Checked" Unchecked="datacontscheckBox_Checked"/>
+                                    <StackPanel Height="2.5"/>
+                                    <Fluent:CheckBox x:Name="datacontpocheckBox" Header="{DynamicResource m_po}" Checked="datacontpocheckBox_Checked" Unchecked="datacontpocheckBox_Checked"/>
+                                </StackPanel>
+                                <StackPanel >
+                                    <DatePicker x:Name="datacontrsdatePicker" IsEnabled="False" SelectedDateChanged="datacontrsdatePicker_SelectedDateChanged" VerticalContentAlignment="Center" SelectedDate="{x:Static sys:DateTime.Now}" HorizontalAlignment="Left" Width="145" />
+                                    <DatePicker x:Name="datacontrpodatePicker" IsEnabled="False" SelectedDateChanged="datacontrpodatePicker_SelectedDateChanged"  VerticalContentAlignment="Center" SelectedDate="{x:Static sys:DateTime.Now}" HorizontalAlignment="Left" Width="145" />
+                                </StackPanel>
+                            </StackPanel>
+                        </StackPanel>
+                        <StackPanel Width="5" >
+                        </StackPanel>
+                        <StackPanel >
+                            <TextBlock HorizontalAlignment="Left" Text="{DynamicResource m_registration_date}" />
+                            <StackPanel Orientation="Horizontal">
+                                <StackPanel >
+                                    <StackPanel Height="2.5"/>
+                                    <Fluent:CheckBox x:Name="dataregscheckBox" Header="{DynamicResource m_s}" Checked="dataregscheckBox_Checked" Unchecked="dataregscheckBox_Checked"/>
+                                    <StackPanel Height="2.5"/>
+                                    <Fluent:CheckBox x:Name="dataregpocheckBox" Header="{DynamicResource m_po}" Checked="dataregpocheckBox_Checked" Unchecked="dataregpocheckBox_Checked"/>
+                                </StackPanel>
+                                <StackPanel >
+                                    <DatePicker x:Name="dataregsdatePicker" IsEnabled="False" SelectedDateChanged="dataregsdatePicker_SelectedDateChanged"  VerticalContentAlignment="Center" SelectedDate="{x:Static sys:DateTime.Now}" HorizontalAlignment="Left" Width="145" />
+                                    <DatePicker x:Name="dataregpodatePicker" IsEnabled="False" SelectedDateChanged="dataregpodatePicker_SelectedDateChanged"  VerticalContentAlignment="Center" SelectedDate="{x:Static sys:DateTime.Now}" HorizontalAlignment="Left" Width="145" />
+                                </StackPanel>
+                            </StackPanel>
+                        </StackPanel>
+                        <StackPanel Width="5" >
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <StackPanel >
+                                <Fluent:CheckBox x:Name="oblcheckBox" Header="{DynamicResource m_obl}" Checked="oblcheckBox_Checked" Unchecked="oblcheckBox_Checked"/>
+                                <StackPanel Height="2.5"/>
+                                <Fluent:CheckBox x:Name="raycheckBox" Header="{DynamicResource m_ray}" Checked="raycheckBox_Checked" Unchecked="raycheckBox_Checked"/>
+                                <StackPanel Height="2.5"/>
+                                <Fluent:CheckBox x:Name="silcheckBox" Header="{DynamicResource m_sil}" Checked="silcheckBox_Checked" Unchecked="silcheckBox_Checked"/>
+                            </StackPanel>
+                            <StackPanel >
+                                <Fluent:ComboBox x:Name="oblcomboBox" IsEnabled="False" Width="145" SelectionChanged="oblcomboBox_SelectionChanged"/>
+                                <Fluent:ComboBox x:Name="raycomboBox" IsEnabled="False" SelectionChanged="raycomboBox_SelectionChanged" Width="145"/>
+                                <Fluent:ComboBox x:Name="silcomboBox" IsEnabled="False" SelectionChanged="silcomboBox_SelectionChanged" Width="145"/>
+                            </StackPanel>
+                        </StackPanel>
+                        <StackPanel Width="5" >
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <StackPanel >
+                                <Fluent:CheckBox x:Name="typecheckBox" Header="{DynamicResource m_type_contract}" Checked="typecheckBox_Checked" Unchecked="typecheckBox_Checked"/>
+                                <StackPanel Height="2.5"/>
+                                <Fluent:CheckBox x:Name="areacheckBox" Header="{DynamicResource m_area_number}" Checked="areacheckBox_Checked" Unchecked="areacheckBox_Checked"/>
+                                <StackPanel Height="2.5"/>
+                                <Fluent:CheckBox x:Name="unitcheckBox" Header="{DynamicResource m_unit_number}" Checked="unitcheckBox_Checked"  Unchecked="unitcheckBox_Checked"/>
+                            </StackPanel>
+                            <StackPanel >
+                                <Fluent:ComboBox x:Name="typecomboBox" IsEnabled="False" SelectedValuePath="Key" SelectionChanged="typecomboBox_SelectionChanged" DisplayMemberPath="Value" VerticalContentAlignment="Center" HorizontalAlignment="Left" Width="145" />
+                                <Fluent:TextBox x:Name="areatextBox" Text="" IsEnabled="False" TextChanged="areatextBox_TextChanged" Width="145"/>
+                                <Fluent:TextBox x:Name="unittextBox" Text="" IsEnabled="False" TextChanged="unittextBox_TextChanged" Width="145"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </StackPanel>
+                </Fluent:RibbonGroupBox>
+            </Fluent:RibbonTabItem>
+            <Fluent:RibbonTabItem x:Name="maptabfil" Header="{DynamicResource m_maprparam}" Visibility="Visible" Group="{Binding ElementName=filGroup}">
+                <Fluent:RibbonGroupBox Header="{DynamicResource m_extraopt}">
+                    <StackPanel Orientation="Horizontal">
+                        <StackPanel >
+                            <TextBlock HorizontalAlignment="Left" Text="{DynamicResource m_date_contract}" />
+                            <StackPanel Orientation="Horizontal">
+                                <StackPanel >
+                                    <StackPanel Height="2.5"/>
+                                    <Fluent:CheckBox x:Name="mapdatacontscheckBox" Header="{DynamicResource m_s}" Checked="mapdatacontscheckBox_Checked" Unchecked="mapdatacontscheckBox_Checked"/>
+                                    <StackPanel Height="2.5"/>
+                                    <Fluent:CheckBox x:Name="mapdatacontpocheckBox" Header="{DynamicResource m_po}" Checked="mapdatacontpocheckBox_Checked" Unchecked="mapdatacontpocheckBox_Checked"/>
+                                </StackPanel>
+                                <StackPanel >
+                                    <DatePicker x:Name="mapdatacontrsdatePicker" IsEnabled="False" SelectedDateChanged="mapdatacontrsdatePicker_SelectedDateChanged" VerticalContentAlignment="Center" SelectedDate="{x:Static sys:DateTime.Now}" HorizontalAlignment="Left" Width="145" />
+                                    <DatePicker x:Name="mapdatacontrpodatePicker" IsEnabled="False" SelectedDateChanged="mapdatacontrpodatePicker_SelectedDateChanged"  VerticalContentAlignment="Center" SelectedDate="{x:Static sys:DateTime.Now}" HorizontalAlignment="Left" Width="145" />
+                                </StackPanel>
+                            </StackPanel>
+                        </StackPanel>
+                        <StackPanel Width="5" >
+                        </StackPanel>
+                        <StackPanel >
+                            <TextBlock HorizontalAlignment="Left" Text="{DynamicResource m_registration_date}" />
+                            <StackPanel Orientation="Horizontal">
+                                <StackPanel >
+                                    <StackPanel Height="2.5"/>
+                                    <Fluent:CheckBox x:Name="mapdataregscheckBox" Header="{DynamicResource m_s}" Checked="mapdataregscheckBox_Checked" Unchecked="mapdataregscheckBox_Checked"/>
+                                    <StackPanel Height="2.5"/>
+                                    <Fluent:CheckBox x:Name="mapdataregpocheckBox" Header="{DynamicResource m_po}" Checked="mapdataregpocheckBox_Checked" Unchecked="mapdataregpocheckBox_Checked"/>
+                                </StackPanel>
+                                <StackPanel >
+                                    <DatePicker x:Name="mapdataregsdatePicker" IsEnabled="False" SelectedDateChanged="mapdataregsdatePicker_SelectedDateChanged"  VerticalContentAlignment="Center" SelectedDate="{x:Static sys:DateTime.Now}" HorizontalAlignment="Left" Width="145" />
+                                    <DatePicker x:Name="mapdataregpodatePicker" IsEnabled="False" SelectedDateChanged="mapdataregpodatePicker_SelectedDateChanged"  VerticalContentAlignment="Center" SelectedDate="{x:Static sys:DateTime.Now}" HorizontalAlignment="Left" Width="145" />
+                                </StackPanel>
+                            </StackPanel>
+                        </StackPanel>
+                        <StackPanel Width="5" >
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <StackPanel >
+                                <Fluent:CheckBox x:Name="mapoblcheckBox" Header="{DynamicResource m_obl}" Checked="mapoblcheckBox_Checked" Unchecked="mapoblcheckBox_Checked"/>
+                                <StackPanel Height="2.5"/>
+                                <Fluent:CheckBox x:Name="mapraycheckBox" Header="{DynamicResource m_ray}" Checked="mapraycheckBox_Checked" Unchecked="mapraycheckBox_Checked"/>
+                                <StackPanel Height="2.5"/>
+                                <Fluent:CheckBox x:Name="mapsilcheckBox" Header="{DynamicResource m_sil}" Checked="mapsilcheckBox_Checked" Unchecked="mapsilcheckBox_Checked"/>
+                            </StackPanel>
+                            <StackPanel >
+                                <Fluent:ComboBox x:Name="mapoblcomboBox" IsEnabled="False" SelectionChanged="mapoblcomboBox_SelectionChanged" Width="145"/>
+                                <Fluent:ComboBox x:Name="mapraycomboBox" IsEnabled="False" SelectionChanged="mapraycomboBox_SelectionChanged" Width="145"/>
+                                <Fluent:ComboBox x:Name="mapsilcomboBox" IsEnabled="False" SelectionChanged="mapsilcomboBox_SelectionChanged" Width="145"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </StackPanel>
+                </Fluent:RibbonGroupBox>
+            </Fluent:RibbonTabItem>
+            <Fluent:RibbonTabItem x:Name="tabrep" Header="{DynamicResource m_preview}" Visibility="Visible" Group="{Binding ElementName=repGroup}">
+                <Fluent:RibbonGroupBox Header="{DynamicResource m_repcol}">
+                    <StackPanel Orientation="Horizontal">
+                        <StackPanel >
+                            <Fluent:CheckBox x:Name="repcontrnumcheckBox" Header="{DynamicResource m_contrnum}" Checked="repcontrnumcheckBox_Checked"  Unchecked="repcontrnumcheckBox_Checked"/>
+                            <StackPanel Height="2.5"/>
+                            <Fluent:CheckBox x:Name="repdatecontrcheckBox" Header="{DynamicResource m_date_contract}" Checked="repdatecontrcheckBox_Checked"  Unchecked="repdatecontrcheckBox_Checked"/>
+                            <StackPanel Height="2.5"/>
+                            <Fluent:CheckBox x:Name="repdateregcheckBox" Header="{DynamicResource m_registration_date}" Checked="repdateregcheckBox_Checked"  Unchecked="repdateregcheckBox_Checked"/>
+                        </StackPanel>
+                        <StackPanel >
+                            <Fluent:TextBox x:Name="repcontrnumtextBox" TextChanged="repcontrnumtextBox_TextChanged" IsEnabled="False" VerticalContentAlignment="Center" HorizontalAlignment="Left" Width="40" Text="" PreviewTextInput="qcadnumt4extBox_PreviewTextInput"  MaxLength="3"/>
+                            <Fluent:TextBox x:Name="repdatecontrtextBox" TextChanged="repdatecontrtextBox_TextChanged"  IsEnabled="False" VerticalContentAlignment="Center" HorizontalAlignment="Left" Width="40" Text="" PreviewTextInput="qcadnumt4extBox_PreviewTextInput" MaxLength="3"/>
+                            <Fluent:TextBox x:Name="repdateregtextBox" TextChanged="repdateregtextBox_TextChanged"  IsEnabled="False" VerticalContentAlignment="Center" HorizontalAlignment="Left" Width="40" Text="" PreviewTextInput="qcadnumt4extBox_PreviewTextInput" MaxLength="3"/>
+                        </StackPanel>
+                        <StackPanel Width="8" />
+                        <StackPanel >
+                            <Fluent:CheckBox x:Name="replessorcheckBox" Header="{DynamicResource m_lessor}" Checked="replessorcheckBox_Checked"  Unchecked="replessorcheckBox_Checked"/>
+                            <StackPanel Height="2.5"/>
+                            <Fluent:CheckBox x:Name="repleasercheckBox" Header="{DynamicResource m_leaser}" Checked="repleasercheckBox_Checked"  Unchecked="repleasercheckBox_Checked"/>
+                            <StackPanel Height="2.5"/>
+                            <Fluent:CheckBox x:Name="repcadnumcheckBox" Header="{DynamicResource m_cadnum}" Checked="repcadnumcheckBox_Checked"  Unchecked="repcadnumcheckBox_Checked"/>
+                        </StackPanel>
+                        <StackPanel >
+                            <Fluent:TextBox x:Name="replessortextBox" TextChanged="replessortextBox_TextChanged"  IsEnabled="False" VerticalContentAlignment="Center" HorizontalAlignment="Left" Width="40" Text="" PreviewTextInput="qcadnumt4extBox_PreviewTextInput"  MaxLength="3"/>
+                            <Fluent:TextBox x:Name="repleasertextBox" TextChanged="repleasertextBox_TextChanged"  IsEnabled="False" VerticalContentAlignment="Center" HorizontalAlignment="Left" Width="40" Text="" PreviewTextInput="qcadnumt4extBox_PreviewTextInput" MaxLength="3"/>
+                            <Fluent:TextBox x:Name="repcadnumtextBox" TextChanged="repcadnumtextBox_TextChanged"  IsEnabled="False" VerticalContentAlignment="Center" HorizontalAlignment="Left" Width="40" Text="" PreviewTextInput="qcadnumt4extBox_PreviewTextInput" MaxLength="3"/>
+                        </StackPanel>
+                        <StackPanel Width="8" />
+                        <StackPanel >
+                            <Fluent:CheckBox x:Name="repsquarecheckBox" Header="{DynamicResource m_square}" Checked="repsquarecheckBox_Checked"  Unchecked="repsquarecheckBox_Checked"/>
+                            <StackPanel Height="2.5"/>
+                            <Fluent:CheckBox x:Name="reptermleasecheckBox" Header="{DynamicResource m_term_lease}" Checked="reptermleasecheckBox_Checked"  Unchecked="reptermleasecheckBox_Checked"/>
+                            <StackPanel Height="2.5"/>
+                            <Fluent:CheckBox x:Name="repcontrstatcheckBox" Header="{DynamicResource m_status}" Checked="repcontrstatcheckBox_Checked"  Unchecked="repcontrstatcheckBox_Checked"/>
+                        </StackPanel>
+                        <StackPanel >
+                            <Fluent:TextBox x:Name="repsquaretextBox" TextChanged="repsquaretextBox_TextChanged"  IsEnabled="False" VerticalContentAlignment="Center" HorizontalAlignment="Left" Width="40" Text="" PreviewTextInput="qcadnumt4extBox_PreviewTextInput"  MaxLength="3"/>
+                            <Fluent:TextBox x:Name="reptermleasetextBox" TextChanged="reptermleasetextBox_TextChanged"  IsEnabled="False" VerticalContentAlignment="Center" HorizontalAlignment="Left" Width="40" Text="" PreviewTextInput="qcadnumt4extBox_PreviewTextInput" MaxLength="3"/>
+                            <Fluent:TextBox x:Name="repcontrstattextBox" TextChanged="repcontrstattextBox_TextChanged"  IsEnabled="False" VerticalContentAlignment="Center" HorizontalAlignment="Left" Width="40" Text="" PreviewTextInput="qcadnumt4extBox_PreviewTextInput" MaxLength="3"/>
+                        </StackPanel>
+                        <StackPanel Width="8"/>
+                        <StackPanel >
+                            <Fluent:CheckBox x:Name="reptypecontrcheckBox" Header="{DynamicResource m_type_contract}" Checked="reptypecontrcheckBox_Checked"  Unchecked="reptypecontrcheckBox_Checked"/>
+                            <StackPanel Height="2.5"/>
+                            <Fluent:CheckBox x:Name="repformownercheckBox" Header="{DynamicResource m_form_owner}" Checked="repformownercheckBox_Checked"  Unchecked="repformownercheckBox_Checked"/>
+                            <StackPanel Height="2.5"/>
+                            <Fluent:CheckBox x:Name="repformusecheckBox" Header="{DynamicResource m_form_use}" Checked="repformusecheckBox_Checked"  Unchecked="repformusecheckBox_Checked"/>
+                        </StackPanel>
+                        <StackPanel >
+                            <Fluent:TextBox x:Name="reptypecontrtextBox" TextChanged="reptypecontrtextBox_TextChanged"  IsEnabled="False" VerticalContentAlignment="Center" HorizontalAlignment="Left" Width="40" Text="" PreviewTextInput="qcadnumt4extBox_PreviewTextInput"  MaxLength="3"/>
+                            <Fluent:TextBox x:Name="repformownertextBox" TextChanged="repformownertextBox_TextChanged"  IsEnabled="False" VerticalContentAlignment="Center" HorizontalAlignment="Left" Width="40" Text="" PreviewTextInput="qcadnumt4extBox_PreviewTextInput" MaxLength="3"/>
+                            <Fluent:TextBox x:Name="repformusetextBox" TextChanged="repformusetextBox_TextChanged"  IsEnabled="False" VerticalContentAlignment="Center" HorizontalAlignment="Left" Width="40" Text="" PreviewTextInput="qcadnumt4extBox_PreviewTextInput" MaxLength="3"/>
+                        </StackPanel>
+                        <StackPanel Width="8"/>
+                        <StackPanel >
+                            <Fluent:CheckBox x:Name="repformunitcheckBox" Header="{DynamicResource m_form_unit}" Checked="repformunitcheckBox_Checked"  Unchecked="repformunitcheckBox_Checked"/>
+                            <StackPanel Height="2.5"/>
+                            <Fluent:CheckBox x:Name="repkoatuucheckBox" Header="КОАТУУ" Checked="repkoatuucheckBox_Checked"  Unchecked="repkoatuucheckBox_Checked"/>
+                            <StackPanel Height="2.5"/>
+                            <Fluent:CheckBox x:Name="repareanumcheckBox" Header="{DynamicResource m_area_number}" Checked="repareanumcheckBox_Checked"  Unchecked="repareanumcheckBox_Checked"/>
+                        </StackPanel>
+                        <StackPanel >
+                            <Fluent:TextBox x:Name="repformunittextBox" TextChanged="repformunittextBox_TextChanged"  IsEnabled="False" VerticalContentAlignment="Center" HorizontalAlignment="Left" Width="40" Text="" PreviewTextInput="qcadnumt4extBox_PreviewTextInput"  MaxLength="3"/>
+                            <Fluent:TextBox x:Name="repkoatuutextBox" TextChanged="repkoatuutextBox_TextChanged"  IsEnabled="False" VerticalContentAlignment="Center" HorizontalAlignment="Left" Width="40" Text="" PreviewTextInput="qcadnumt4extBox_PreviewTextInput" MaxLength="3"/>
+                            <Fluent:TextBox x:Name="repareanumtextBox" TextChanged="repareanumtextBox_TextChanged"  IsEnabled="False" VerticalContentAlignment="Center" HorizontalAlignment="Left" Width="40" Text="" PreviewTextInput="qcadnumt4extBox_PreviewTextInput" MaxLength="3"/>
+                        </StackPanel>
+                        <StackPanel Width="8"/>
+                        <StackPanel >
+                            <Fluent:CheckBox x:Name="repunitnumcheckBox" Header="{DynamicResource m_unit_number}" Checked="repunitnumcheckBox_Checked"  Unchecked="repunitnumcheckBox_Checked"/>
+                            <StackPanel Height="2.5"/>
+                            <Fluent:CheckBox x:Name="repnotescheckBox" Header="{DynamicResource m_notes}" Checked="repnotescheckBox_Checked"  Unchecked="repnotescheckBox_Checked"/>                            
+                        </StackPanel>
+                        <StackPanel >
+                            <Fluent:TextBox x:Name="repunitnumtextBox" TextChanged="repunitnumtextBox_TextChanged"  IsEnabled="False" VerticalContentAlignment="Center" HorizontalAlignment="Left" Width="40" Text="" PreviewTextInput="qcadnumt4extBox_PreviewTextInput" MaxLength="3"/>
+                            <Fluent:TextBox x:Name="repnotestextBox" TextChanged="repnotestextBox_TextChanged"  IsEnabled="False" VerticalContentAlignment="Center" HorizontalAlignment="Left" Width="40" Text="" PreviewTextInput="qcadnumt4extBox_PreviewTextInput" MaxLength="3"/>
+                        </StackPanel>
+                    </StackPanel>
+                </Fluent:RibbonGroupBox>
+            </Fluent:RibbonTabItem>
+
+        </Fluent:Ribbon>
+        <Grid x:Name="grid1" Margin="0,144,0,0" Visibility="Visible" >
+            
+            <ListView Name="listView"
+                      MouseDoubleClick="RowDoubleClick"
+                      SelectedItem="{Binding SelectedItem, Mode=TwoWay}"
+                      VirtualizingStackPanel.IsVirtualizing="True"
+                      VirtualizingStackPanel.VirtualizationMode="Recycling"
+                      ScrollViewer.CanContentScroll="True" Margin="0,0,0,22">
+                <ListView.ContextMenu>
+                    <ContextMenu >
+                        <MenuItem Header="{DynamicResource m_gomap}" Click="gomapMenuItem_Click"  />
+                        <MenuItem Header="{DynamicResource m_delcontr}" Click="delcontrMenuItem_Click"  />
+                    </ContextMenu>
+                </ListView.ContextMenu>
+                <ListView.View>
+                    <GridView>
+                        <GridView.Columns>
+                            <GridViewColumn Width="0" DisplayMemberBinding="{Binding id}"/>
+                            <GridViewColumn Width="auto" Header="{DynamicResource m_contrnum}" DisplayMemberBinding="{Binding contract_number}"/>
+                            <GridViewColumn Width="auto" Header="{DynamicResource m_date_contract}" DisplayMemberBinding="{Binding date_contract}"/>
+                            <GridViewColumn Width="auto" Header="{DynamicResource m_registration_date}" DisplayMemberBinding="{Binding registration_date}"/>
+                            <GridViewColumn Width="auto" Header="{DynamicResource m_lessor}" DisplayMemberBinding="{Binding lessor}"/>
+                            <GridViewColumn Width="auto" Header="{DynamicResource m_leaser}" DisplayMemberBinding="{Binding leaser}"/>
+                            <GridViewColumn Width="auto" Header="{DynamicResource m_cadnum}" DisplayMemberBinding="{Binding cadastral_number}"/>
+                            <GridViewColumn Width="auto" Header="{DynamicResource m_square}" DisplayMemberBinding="{Binding square}"/>
+                            <GridViewColumn Width="auto" Header="{DynamicResource m_term_lease}" DisplayMemberBinding="{Binding term_lease}"/>
+                            <GridViewColumn Width="auto" Header="{DynamicResource m_contract_status}">
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock>
+                                            <TextBlock.Style>
+                                                <Style TargetType="{x:Type TextBlock}">
+                                                    <Style.Triggers>
+                                                        <DataTrigger Binding="{Binding contract_status}" Value="0" >
+                                                            <Setter Property="Text" Value="{DynamicResource m_registered}"/>
+                                                        </DataTrigger>
+                                                        <DataTrigger Binding="{Binding contract_status}" Value="1" >
+                                                            <Setter Property="Text" Value="{DynamicResource m_noregistered}"/>
+                                                        </DataTrigger>
+                                                    </Style.Triggers>
+                                                </Style>
+                                            </TextBlock.Style>
+                                        </TextBlock>
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+                            <GridViewColumn Width="auto" Header="{DynamicResource m_type_contract}">
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate >
+                                        <TextBlock>
+                                            <TextBlock.Style>
+                                                <Style TargetType="{x:Type TextBlock}">
+                                                    <Style.Triggers>
+                                                        <DataTrigger Binding="{Binding type_contract}" Value="0" >
+                                                            <Setter Property="Text" Value="{DynamicResource m_contrlease}"/>
+                                                        </DataTrigger>
+                                                        <DataTrigger Binding="{Binding type_contract}" Value="1" >
+                                                            <Setter Property="Text" Value="{DynamicResource m_contrsublease}"/>
+                                                        </DataTrigger>
+                                                        <DataTrigger Binding="{Binding type_contract}" Value="2" >
+                                                            <Setter Property="Text" Value="{DynamicResource m_contrjoint}"/>
+                                                        </DataTrigger>
+                                                        <DataTrigger Binding="{Binding type_contract}" Value="3" >
+                                                            <Setter Property="Text" Value="{DynamicResource m_contrcommun}"/>
+                                                        </DataTrigger>
+                                                    </Style.Triggers>
+                                                </Style>
+                                            </TextBlock.Style>
+                                        </TextBlock>
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+                            <GridViewColumn Width="auto" Header="{DynamicResource m_form_owner}">
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate >
+                                        <TextBlock>
+                                            <TextBlock.Style>
+                                                <Style TargetType="{x:Type TextBlock}">
+                                                    <Style.Triggers>
+                                                        <DataTrigger Binding="{Binding form_owner}" Value="0" >
+                                                            <Setter Property="Text" Value="{DynamicResource m_privt}"/>
+                                                        </DataTrigger>
+                                                        <DataTrigger Binding="{Binding form_owner}" Value="1" >
+                                                            <Setter Property="Text" Value="{DynamicResource m_gov}"/>
+                                                        </DataTrigger>
+                                                        <DataTrigger Binding="{Binding form_owner}" Value="2" >
+                                                            <Setter Property="Text" Value="{DynamicResource m_commun}"/>
+                                                        </DataTrigger>
+                                                    </Style.Triggers>
+                                                </Style>
+                                            </TextBlock.Style>
+                                        </TextBlock>
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+                            <GridViewColumn Width="auto" Header="{DynamicResource m_form_use}">
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate >
+                                        <TextBlock>
+                                            <TextBlock.Style>
+                                                <Style TargetType="{x:Type TextBlock}">
+                                                    <Style.Triggers>
+                                                        <DataTrigger Binding="{Binding form_use}" Value="0" >
+                                                            <Setter Property="Text" Value="{DynamicResource m_commagr}"/>
+                                                        </DataTrigger>
+                                                        <DataTrigger Binding="{Binding form_use}" Value="1" >
+                                                            <Setter Property="Text" Value="{DynamicResource m_farm}"/>
+                                                        </DataTrigger>
+                                                        <DataTrigger Binding="{Binding form_use}" Value="2" >
+                                                            <Setter Property="Text" Value="{DynamicResource m_privtfarm}"/>
+                                                        </DataTrigger>
+                                                        <DataTrigger Binding="{Binding form_use}" Value="3" >
+                                                            <Setter Property="Text" Value="{DynamicResource m_industrial}"/>
+                                                        </DataTrigger>
+                                                    </Style.Triggers>
+                                                </Style>
+                                            </TextBlock.Style>
+                                        </TextBlock>
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+                            <GridViewColumn Width="auto" Header="{DynamicResource m_form_unit}">
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate >
+                                        <TextBlock>
+                                            <TextBlock.Style>
+                                                <Style TargetType="{x:Type TextBlock}">
+                                                    <Style.Triggers>
+                                                        <DataTrigger Binding="{Binding form_unit}" Value="0" >
+                                                            <Setter Property="Text" Value="{DynamicResource m_arable}"/>
+                                                        </DataTrigger>
+                                                        <DataTrigger Binding="{Binding form_unit}" Value="1" >
+                                                            <Setter Property="Text" Value="{DynamicResource m_haymaking}"/>
+                                                        </DataTrigger>
+                                                        <DataTrigger Binding="{Binding form_unit}" Value="2" >
+                                                            <Setter Property="Text" Value="{DynamicResource m_pasture}"/>
+                                                        </DataTrigger>
+                                                        <DataTrigger Binding="{Binding form_unit}" Value="3" >
+                                                            <Setter Property="Text" Value="{DynamicResource m_perennials}"/>
+                                                        </DataTrigger>
+                                                        <DataTrigger Binding="{Binding form_unit}" Value="4" >
+                                                            <Setter Property="Text" Value="{DynamicResource m_farmstead}"/>
+                                                        </DataTrigger>
+                                                        <DataTrigger Binding="{Binding form_use}" Value="5" >
+                                                            <Setter Property="Text" Value="{DynamicResource m_industrial}"/>
+                                                        </DataTrigger>
+                                                    </Style.Triggers>
+                                                </Style>
+                                            </TextBlock.Style>
+                                        </TextBlock>
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+                            <GridViewColumn Width="auto" Header="{DynamicResource m_koatuu}" DisplayMemberBinding="{Binding koatuu}"/>
+                            <GridViewColumn Width="auto" Header="{DynamicResource m_area_number}" DisplayMemberBinding="{Binding area_number}"/>
+                            <GridViewColumn Width="auto" Header="{DynamicResource m_unit_number}" DisplayMemberBinding="{Binding unit_number}"/>
+                            <GridViewColumn Width="auto" Header="{DynamicResource m_notes}" DisplayMemberBinding="{Binding notes}"/>
+                        </GridView.Columns>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+            
+            <Fluent:StatusBar HorizontalAlignment="Stretch"
+                          VerticalAlignment="Bottom" >
+                <Fluent:StatusBarItem HorizontalAlignment="Left">
+                    <TextBlock x:Name="contrlbl"/>
+                </Fluent:StatusBarItem>
+            </Fluent:StatusBar>
+        </Grid>
+        <Grid x:Name="grid2" Margin="0,144,0,0" Visibility="Collapsed">
+        </Grid>
+        <Grid x:Name="grid3" Margin="0,144,0,0" Visibility="Collapsed">
+            <awe:WebControl Width="auto" Height="auto" Margin="0,0,0,22" x:Name="webControl1"
+                            ShowContextMenu="webControl1_ShowContextMenu"
+                            NativeView="{Binding NativeView, ElementName=webWindow}"
+                            DocumentReady="webControl1_DocumentReady" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                            LoadingFrameComplete="webControl1_LoadingFrameComplete" ViewType="Window">
+                <awe:WebControl.ContextMenu>
+                        <ContextMenu x:Name="webControl1contextMenu">
+                            <MenuItem Header="{DynamicResource m_copy}" Command="Copy"/>
+                            <MenuItem Header="{DynamicResource m_cut}" Command="Cut"/>
+                            <MenuItem Header="{DynamicResource m_paste}" Command="Paste"/>
+                            <MenuItem Header="{DynamicResource m_print}" x:Name="printmenuItem" Click="printmenuItem_Click"/>
+                            <MenuItem Header="{DynamicResource m_reload}" x:Name="reloadmenuItem" Click="reloadmenuItem_Click"/>
+                    </ContextMenu>
+                </awe:WebControl.ContextMenu>
+            </awe:WebControl>
+            <Fluent:StatusBar HorizontalAlignment="Stretch"
+                          VerticalAlignment="Bottom"
+                          Grid.Row="2">
+                <Fluent:StatusBarItem HorizontalAlignment="Left">
+                    <TextBlock x:Name="maplbl"/>
+                </Fluent:StatusBarItem>
+            </Fluent:StatusBar>
+        </Grid>
+        <Grid x:Name="grid4" Margin="0,144,0,0" Visibility="Collapsed">
+            <md:DocumentPreview x:Name="pagePreview" />
+            <Fluent:StatusBar HorizontalAlignment="Stretch"
+                          VerticalAlignment="Bottom"
+                          Grid.Row="2"
+                              Height="24">
+                <Fluent:StatusBarItem HorizontalAlignment="Left">
+                    <TextBlock x:Name="replbl"/>
+                </Fluent:StatusBarItem>
+            </Fluent:StatusBar>                   
+        </Grid>
+        <!--<Fluent:StatusBar HorizontalAlignment="Stretch"
+                          VerticalAlignment="Bottom"
+                          Grid.Row="2">
+            <Fluent:StatusBarItem HorizontalAlignment="Left">
+                <TextBlock x:Name="lbl"/>
+            </Fluent:StatusBarItem>
+        </Fluent:StatusBar>-->
+    </Grid>
+    </awe:WebDialogsLayer>
+</Fluent:RibbonWindow>
